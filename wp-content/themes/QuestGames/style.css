@@ -1,0 +1,30 @@
+/*
+Theme Name: QuestGames
+Author: Alessandro, Daniel e Vinicius
+Author URI: 
+Description: Tema para questgames uma loja virtual de jogos indies
+Version: 1.0
+*/
+
+
+/*<?php woocommerce_content()?> */
+
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #323232;
+    --cor-terciaria: #ffffff;
+    --cor-quaternaria: #212121;
+    --cor-retoques: #0c9e35;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor-principal);
+    min-height: 100vh;
+}
