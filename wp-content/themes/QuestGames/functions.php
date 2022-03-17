@@ -11,12 +11,14 @@ function add_theme_styles() {
     wp_enqueue_style('header', get_template_directory_uri().'/assets/css/header.css');
     wp_enqueue_style('footer', get_template_directory_uri().'/assets/css/footer.css');
     wp_enqueue_style('SingleProduct',get_template_directory_uri().'/assets/css/singleProduct.css');
+    wp_enqueue_style('Home',get_template_directory_uri().'/assets/css/home.css');
 }
 
 
 function add_theme_scripts() {
     //	wp_enqueue_script( 'nome', 'url ou local do arquivo', array(dependencias), 'versão Ex: 1.0, 1.2' , posição do script(false no header, true no footer));
     wp_enqueue_script('header',get_template_directory_uri().'/assets/js/header.js');
+    wp_enqueue_script('home',get_template_directory_uri().'/assets/js/home.js',array(),'1.0',true);
 
     //ion-icon
 
