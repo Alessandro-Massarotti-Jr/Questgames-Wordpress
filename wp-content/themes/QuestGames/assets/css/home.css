@@ -1,44 +1,44 @@
-.bannerContainer{
+.home .bannerContainer{
     width: 100%;
     height: 500px;
     overflow: hidden;
 }
-.banner {
+.home .banner {
     width: 300%;
     height: 500px;
     display: flex;
     transition: 2s;
 }
 
-.bannerItem {
+.home .bannerItem {
     width: 33.333333%;
     transition: 2s;
 }
 
-.bannerItemImage{
+.home .bannerItemImage{
 width: 100%;
 height: 500px;
 }
 
-.bannerItemImage img{
+.home .bannerItemImage img{
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
 
 
-.bannerNav{
+.home .bannerNav{
     position: relative;
     display: flex;
     top: -40px;
     left: 45%;
 }
 
-.bannerNav label input{
+.home .bannerNav label input{
     appearance: none;
 }
 
-.bannerNav label{
+.home .bannerNav label{
     background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 50%;
@@ -49,12 +49,12 @@ object-fit: cover;
     transition: 0.3s;
 }
 
-.bannerNav label:hover{
+.home .bannerNav label:hover{
     border:2px solid var(--cor-retoques)
 
 }
 
-.bannerNav span{
+.home .bannerNav span{
     width: 16px;
     height: 16px;
     background-color: transparent;
@@ -64,11 +64,11 @@ object-fit: cover;
     transition: 0.3s;
 }
 
-.bannerNav label input:checked ~ span{
+.home .bannerNav label input:checked ~ span{
     background-color: #ffffff;
 }
 
-.bannerTitle{
+.home .bannerTitle{
     position: absolute;
     background-color: rgba(0,0,0,0.8);
     padding: 3px 60px;
@@ -79,6 +79,6 @@ object-fit: cover;
     transition: 0.3s;
 }
 
-.bannerItem:hover .bannerTitle{
+.home .bannerItem:hover .bannerTitle{
     color: var(--cor-retoques);
 }
