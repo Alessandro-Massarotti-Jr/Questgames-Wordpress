@@ -34,7 +34,7 @@
                 <a href="/login">
                     <ion-icon class="icons" name="log-in-outline"></ion-icon>Login
                 </a>
-                <a href="/register">
+                <a href="<?php echo home_url().'/cadastro'?>">
                     <ion-icon class="icons" name="person-add-outline"></ion-icon>cadastro
                 </a>
 

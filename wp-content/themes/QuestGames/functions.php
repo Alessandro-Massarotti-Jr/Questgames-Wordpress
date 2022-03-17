@@ -12,6 +12,7 @@ function add_theme_styles() {
     wp_enqueue_style('footer', get_template_directory_uri().'/assets/css/footer.css');
     wp_enqueue_style('SingleProduct',get_template_directory_uri().'/assets/css/singleProduct.css');
     wp_enqueue_style('Home',get_template_directory_uri().'/assets/css/home.css');
+    wp_enqueue_style('Cadastro',get_template_directory_uri().'/assets/css/cadastro.css');
 }
 
 
