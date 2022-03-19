@@ -1,3 +1,99 @@
 .cadastro{
     display: flex;
+    justify-content: space-between;
+}
+
+.cadastro .image{
+    width: 50%;
+    height: 100vh;
+}
+
+.cadastro .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cadastro .form{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: linear-gradient(45deg, #000000,#000000, #202020);
+}
+
+.cadastro .form .user-registration{
+    border:none;
+}
+.cadastro .form .user-registration input{
+    border: 3px solid #323232;
+    border-radius: 5px!important;
+}
+
+.cadastro .form .user-registration input:focus{
+    border: 3px solid var(--cor-retoques);
+}
+
+.cadastro .form .user-registration button{
+background-color: #000000;
+color: #ffffff;
+border: 2px solid #ffffff;
+border-radius: 3px;
+transition: 0.3s;
+}
+
+.cadastro .form .user-registration button:hover{
+color: var(--cor-retoques);
+border: 2px solid var(--cor-retoques);
+
+}
+
+.cadastro .form .homeBtn{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cadastro .form .homeBtn:hover{
+    color: var(--cor-retoques);
+}
+
+@media(max-width:767px){
+
+    .cadastro .image{
+        display: none;
+    }
+    .cadastro .form{
+        width: 100%;
+        height: 100vh;
+    }
+    .cadastro .form  .user-registration{
+        z-index: 2;
+    }
+    .cadastro .form .user-registration button{
+        background-color: transparent;
+    }
+    .cadastro .form .homeBtn{
+        z-index: 2;
+    }
+    .cadastro .form::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+      background: url(../image/Flogin.png);
+      z-index: 0;
+      background-position: center;
+      background-size: cover;
+    }
+    .cadastro .form::before{
+        content: '';
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
 }
