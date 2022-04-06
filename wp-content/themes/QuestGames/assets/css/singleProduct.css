@@ -76,3 +76,119 @@
 .gamePage .gameimages img:not(:last-child) {
     margin-bottom: 10px;
 }
+
+.modal-container{
+    background-color: rgba(0,0,0,0.4);
+    width: 1000vh;
+    height: 1000vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.modal-container button{
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-terciaria);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: -6%;
+    left: 89%;
+    border: 2px solid var(--cor-terciaria);
+    font-size: 30px;
+}
+
+.modal-container button:hover{
+    color: var(--cor-retoques);
+}
+.modal-container.active{
+    display: block;
+}
+.modal-success{
+    position: fixed;
+    background-color: var(--cor-principal);
+    box-shadow: 0px 0px 60px 5px #0c9e35;
+    top: 30%;
+    left: 40%;
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--cor-terciaria);
+    color: var(--cor-terciaria);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-success.active{
+display: flex;
+}
+
+.modal-success a{
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-terciaria);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.modal-success a:hover{
+    color: var(--cor-retoques);
+}
+
+.modal-error{
+    position: fixed;
+    background-color: var(--cor-principal);
+    box-shadow: 0px 0px 60px 5px #880b0b;
+    top: 30%;
+    left: 40%;
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--cor-terciaria);
+    color: var(--cor-terciaria);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-error.active{
+    display: flex;
+    }
+
+.modal-error a{
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-terciaria);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.modal-error a:hover{
+    color: var(--cor-retoques);
+}

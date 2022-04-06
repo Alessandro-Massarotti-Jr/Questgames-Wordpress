@@ -50,7 +50,20 @@ $price = $product->get_price();
 
     <!-- <img src="<?php the_post_thumbnail_url('post_image') ?>" alt=""> -->
 
+</div>
 
+<div class="modal-container">
+    <div class="modal-success">
+    <button><ion-icon name="close-outline"></ion-icon></button>
+        <h3>Sucesso</h3>
+        <a href="<?php echo home_url() . '/carrinho' ?>">ver carrinho</a>
+    </div>
+    <div class="modal-error">
+    <button><ion-icon name="close-outline"></ion-icon></button>
+        <h3>Erro</h3>
+        <a href="<?php echo home_url() . '/carrinho' ?>">ver carrinho</a>
+    </div>
+    
 </div>
 
 <?php get_footer(); ?>
