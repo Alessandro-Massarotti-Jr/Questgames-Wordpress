@@ -43,7 +43,7 @@ $banner = new WP_Query($bannerArgs);
                 <span></span>
             </label>
             <label for="bannerNav2">
-                <input class="BannerNavBtn" type="radio" name="radio-btn" id="bannerNav2" onchange="banner2()">
+                <input class="BannerNavBtn" type="radio" name="radio-btn" id="bannerNav2" onchange="banner2()">+
                 <span></span>
             </label>
             <label for="bannerNav3">
@@ -52,16 +52,78 @@ $banner = new WP_Query($bannerArgs);
             </label>
         </div>
     </div>
-
+    <div class="all-Path">
+    <p>Path Notes Populares</p>
+</div>
+     <div class="all-games">
     <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-            <div style="background-color: white; margin-top:40px;">
+            <div class="container-shopGames">
+                <div class="container-img">
                 <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
-                <h1><?php the_title(); ?></h1>
-                <a href="<?php echo the_permalink() ?>">Ver mais</a>
+                </div>
+                <p><?php the_title(); ?></p>
+                <a href="<?php echo the_permalink() ?>">Ir para página</a>
             </div>
     <?php endwhile;
     endif; ?>
+    </div>
 
 </div>
+
+<div class="all-gamesTitle">
+    <p>Lançamentos Populares</p>
+</div>
+<div class="all-newGames">
+    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+            <div class="container-newGames">
+                <div class="container-img-desc">
+                    <div class="container-img">
+                        <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>" alt="">
+                    </div>
+                    <p>{Categories}</p>
+                    <p><?php the_title(); ?></p>
+                </div>
+            </div>
+    <?php endwhile;
+    endif; ?>
+</div>
+
+<div class="all-Path">
+    <p>Path Notes Populares</p>
+</div>
+
+<div class="all-pathnotes">
+    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+            <div class="container-newGames">
+            </div>
+    <?php endwhile;
+    endif; ?>
+    <div class="container-path">
+        <div class="container-top">
+            <p>Tittle</p>
+        </div>
+        <div class="container-bot">
+            <p>Lorem ipsum dolor sit amet. Ab architecto repellat et sint galisum in nostrum nihil non rerum voluptate. Sed nisi praesentium aut doloribus alias ut voluptate dolores. At consequatur voluptatem in labore natus qui maiores quam et velit cupiditate aut dolor nesciunt. Ut rerum quod qui inventore enim et sapiente minus nam esse commodi. Aut quam voluptatem non suscipit dolores cum aspernatur molestias cum rerum magni est molestiae provident id facilis rerum sit expedita distinctio. Et repudiandae voluptates quo eius voluptas quo iste aut eligendi architecto qui aspernatur quaerat id dolor deleniti ut libero eligendi? Aut Quis nihil At recusandae rerum sit magni aliquam ut aliquid quis hic repellendus quos eos voluptas aliquam qui sint animi. Ut veritatis saepe qui fugiat nulla cum numquam soluta sit repellendus quisquam eos molestias sint.</p>
+        </div>        
+    </div>
+    
+</div>
+
+<div class="all-comunidade">
+    <p>Artes Populares</p>
+</div>
+
+<div class="all-games">
+    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+            <div class="container-shopGames">
+                <div class="container-img">
+                <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
+                </div>
+                <p><?php the_title(); ?></p>
+                <a href="<?php echo the_permalink() ?>">Ir para página</a>
+            </div>
+    <?php endwhile;
+    endif; ?>
+    </div>
 
 <?php get_footer(); ?>

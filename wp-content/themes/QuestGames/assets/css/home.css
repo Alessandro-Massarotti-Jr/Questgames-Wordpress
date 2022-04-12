@@ -1,84 +1,203 @@
-.home .bannerContainer{
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-}
-.home .banner {
-    width: 300%;
-    height: 500px;
-    display: flex;
-    transition: 2s;
-}
-
-.home .bannerItem {
-    width: 33.333333%;
-    transition: 2s;
-}
-
-.home .bannerItemImage{
-width: 100%;
-height: 500px;
-}
-
-.home .bannerItemImage img{
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-
-.home .bannerNav{
-    position: relative;
-    display: flex;
-    top: -40px;
-    left: 45%;
-}
-
-.home .bannerNav label input{
-    appearance: none;
-}
-
-.home .bannerNav label{
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin: 0px 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.home .bannerNav label:hover{
-    border:2px solid var(--cor-retoques)
-
-}
-
-.home .bannerNav span{
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    position: absolute;
-    border-radius: 50%;
-    top: 2px;
-    transition: 0.3s;
-}
-
-.home .bannerNav label input:checked ~ span{
-    background-color: #ffffff;
-}
-
-.home .bannerTitle{
-    position: absolute;
-    background-color: rgba(0,0,0,0.8);
-    padding: 3px 60px;
-    color: #ffffff;
-    border-bottom-right-radius: 40px;
-    font-size: 40px;
-    font-weight: 400;
-    transition: 0.3s;
-}
-
-.home .bannerItem:hover .bannerTitle{
-    color: var(--cor-retoques);
-}
+    .home .bannerContainer {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    .home .banner {
+        width: 300%;
+        height: 500px;
+        display: flex;
+        transition: 2s;
+    }
+    
+    .home .bannerItem {
+        width: 33.333333%;
+        transition: 2s;
+    }
+    
+    .home .bannerItemImage {
+        width: 100%;
+        height: 500px;
+    }
+    
+    .home .bannerItemImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .home .bannerNav {
+        position: relative;
+        display: flex;
+        top: -40px;
+        left: 45%;
+    }
+    
+    .home .bannerNav label input {
+        appearance: none;
+    }
+    
+    .home .bannerNav label {
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        margin: 0px 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .home .bannerNav label:hover {
+        border: 2px solid var(--cor-retoques)
+    }
+    
+    .home .bannerNav span {
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        position: absolute;
+        border-radius: 50%;
+        top: 2px;
+        transition: 0.3s;
+    }
+    
+    .home .bannerNav label input:checked~span {
+        background-color: #ffffff;
+    }
+    
+    .home .bannerTitle {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 3px 60px;
+        color: #ffffff;
+        border-bottom-right-radius: 40px;
+        font-size: 40px;
+        font-weight: 400;
+        transition: 0.3s;
+    }
+    
+    .home .bannerItem:hover .bannerTitle {
+        color: var(--cor-retoques);
+    }
+    /*HOME GAMES*/
+    
+    .all-games {
+        display: flex;
+        flex-direction: row;
+        color: #ffffff;
+        flex-wrap: wrap;
+        padding: 0 120px 0 120px;
+        justify-content: space-between;
+    }
+    
+    .all-games .container-shopGames {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        padding-left: 5px;
+    }
+    
+    .all-games .container-shopGames .container-img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+    
+    .all-games .container-shopGames .container-img img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+    /*HOME NEW GAMES*/
+    
+    .all-newGames {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    
+    .all-newGames .container-newGames {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .all-newGames .container-newGames .container-img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+    
+    .all-newGames .container-newGames .container-img-desc .container-img img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .all-gamesTitle,
+    .all-Path,
+    .all-comunidade {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0 0 0;
+        background-color: rgb(13, 114, 13);
+    }
+    
+    .all-gamesTitle:hover {
+        background-color: var(--cor-retoques);
+    }
+    
+    .all-gamesTitle p,
+    .all-Path p,
+    .all-comunidade p {
+        font-size: 22px;
+        color: white;
+        text-align: center;
+    }
+    
+    .all-newGames .container-newGames .container-img-desc p {
+        color: white;
+        
+    }
+    /*PATH NOTES*/
+    
+    .all-pathnotes {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+    
+    .all-pathnotes .container-path {
+        width: 30%;
+        margin: 0 10% 0 10%;
+        height: 500px;
+        color: #ffffff;
+    }
+    
+    .all-pathnotes .container-path .container-top {
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: var(--cor-secundaria);
+        padding: 5px;
+        border-radius: 10px 0 10px 0;
+    }
+    
+    .all-pathnotes .container-path .container-bot {
+        margin-top: 10px;
+        background-color: var(--cor-secundaria);
+        padding: 15px;
+        border-radius: 10px 0 10px 0;
+    }
+    
+    .all-pathnotes .container-path .container-bot p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 17;
+        -webkit-box-orient: vertical;
+    }
+    /*ARTE COMUNIDADE*/
