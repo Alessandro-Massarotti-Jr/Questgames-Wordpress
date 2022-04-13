@@ -43,7 +43,7 @@ $banner = new WP_Query($bannerArgs);
                 <span></span>
             </label>
             <label for="bannerNav2">
-                <input class="BannerNavBtn" type="radio" name="radio-btn" id="bannerNav2" onchange="banner2()">+
+                <input class="BannerNavBtn" type="radio" name="radio-btn" id="bannerNav2" onchange="banner2()">
                 <span></span>
             </label>
             <label for="bannerNav3">
@@ -80,7 +80,10 @@ $banner = new WP_Query($bannerArgs);
                     <div class="container-img">
                         <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>" alt="">
                     </div>
-                    <p>{Categories}</p>
+                    <?php 
+                    $gameId = get_the_ID();
+                    $categorias = get_the_terms( $gameId, 'product_cat' );?>
+                    <p>{<?php echo $categorias[0]->name; ?>}</p>
                     <p><?php the_title(); ?></p>
                 </div>
             </div>
