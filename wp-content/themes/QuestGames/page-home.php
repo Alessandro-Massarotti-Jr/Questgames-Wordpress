@@ -16,7 +16,14 @@ $bannerArgs = array(
     'post_status' => 'published',
     'posts_per_page' => 3,
 );
+
 $banner = new WP_Query($bannerArgs);
+
+$categoriesArgs = array(
+    'taxonomy' => 'product_cat',
+);
+$categories = new WP_Query($categoriesArgs);
+
 ?>
 
 <?php get_header(); ?>
@@ -53,80 +60,90 @@ $banner = new WP_Query($bannerArgs);
         </div>
     </div>
     <div class="all-Path">
-    <p>Path Notes Populares</p>
-</div>
-     <div class="all-games">
-    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-            <div class="container-shopGames">
-                <div class="container-img">
-                <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
+        <p>Jogos em destaque</p>
+    </div>
+    <div class="all-games">
+        <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+                <div class="container-shopGames">
+                    <div class="container-img">
+                        <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
+                    </div>
+                    <p><?php the_title(); ?></p>
+                    <a href="<?php echo the_permalink() ?>">Ir para página</a>
                 </div>
-                <p><?php the_title(); ?></p>
-                <a href="<?php echo the_permalink() ?>">Ir para página</a>
-            </div>
-    <?php endwhile;
-    endif; ?>
+        <?php endwhile;
+        endif; ?>
     </div>
 
 </div>
 
 <div class="all-gamesTitle">
-    <p>Lançamentos Populares</p>
+    <p>Categorias</p>
 </div>
-<div class="all-newGames">
-    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-            <div class="container-newGames">
-                <div class="container-img-desc">
-                    <div class="container-img">
-                        <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>" alt="">
-                    </div>
-                    <?php 
-                    $gameId = get_the_ID();
-                    $categorias = get_the_terms( $gameId, 'product_cat' );?>
-                    <p>{<?php echo $categorias[0]->name; ?>}</p>
-                    <p><?php the_title(); ?></p>
-                </div>
-            </div>
-    <?php endwhile;
-    endif; ?>
+<div class="all-categories">
+    <div class="container-img-categories">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="questgames-banner">
+<img src="wp-content/uploads/test/banner-socials.png" alt="">
 </div>
 
 <div class="all-Path">
-    <p>Path Notes Populares</p>
+    <p>Análises de usuários</p>
 </div>
-
-<div class="all-pathnotes">
-    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-            <div class="container-newGames">
-            </div>
-    <?php endwhile;
-    endif; ?>
-    <div class="container-path">
-        <div class="container-top">
-            <p>Tittle</p>
+<div class="all-review">
+    <div class="container-review">
+        <div class="container-review-img">
+            <img src="wp-content/uploads/test/aaaa.png" alt="">
         </div>
-        <div class="container-bot">
-            <p>Lorem ipsum dolor sit amet. Ab architecto repellat et sint galisum in nostrum nihil non rerum voluptate. Sed nisi praesentium aut doloribus alias ut voluptate dolores. At consequatur voluptatem in labore natus qui maiores quam et velit cupiditate aut dolor nesciunt. Ut rerum quod qui inventore enim et sapiente minus nam esse commodi. Aut quam voluptatem non suscipit dolores cum aspernatur molestias cum rerum magni est molestiae provident id facilis rerum sit expedita distinctio. Et repudiandae voluptates quo eius voluptas quo iste aut eligendi architecto qui aspernatur quaerat id dolor deleniti ut libero eligendi? Aut Quis nihil At recusandae rerum sit magni aliquam ut aliquid quis hic repellendus quos eos voluptas aliquam qui sint animi. Ut veritatis saepe qui fugiat nulla cum numquam soluta sit repellendus quisquam eos molestias sint.</p>
-        </div>        
+        <div class="container-review-txt">
+            <div class="title">
+                <p>{Título game} {like or deslike)</p>
+            </div>
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet. Ab architecto repellat et sint galisum in nostrum nihil non rerum voluptate. Sed nisi praesentium aut doloribus alias ut voluptate dolores. At consequatur voluptatem in labore natus qui maiores quam et velit cupiditate aut dolor nesciunt. Ut rerum quod qui inventore enim et sapiente minus nam esse commodi. Aut quam voluptatem non suscipit dolores cum aspernatur molestias cum rerum magni est molestiae provident id facilis rerum sit expedita distinctio. Et repudiandae voluptates quo eius voluptas quo iste aut eligendi architecto qui aspernatur quaerat id dolor deleniti ut libero eligendi? Aut Quis nihil At recusandae rerum sit magni aliquam ut aliquid quis hic repellendus quos eos voluptas aliquam qui sint animi. Ut veritatis saepe qui fugiat nulla cum numquam soluta sit repellendus quisquam eos molestias sint.</p>
+            </div>
+        </div>
+
     </div>
-    
 </div>
 
 <div class="all-comunidade">
-    <p>Artes Populares</p>
+    <p>Path notes recentes</p>
 </div>
 
-<div class="all-games">
-    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-            <div class="container-shopGames">
-                <div class="container-img">
-                <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
-                </div>
-                <p><?php the_title(); ?></p>
-                <a href="<?php echo the_permalink() ?>">Ir para página</a>
+<div class="all-pathnotes">
+    <div class="container-path">
+        <div class="container-img-path">
+            <img src="wp-content/uploads/test/pathnote.png" alt="">
+        </div>
+        <div class="container-path-txt">
+            <div class="container-img-post">
+                <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="">
             </div>
-    <?php endwhile;
-    endif; ?>
+            <p class="title">Titulo</p>
+            <p>Lorem ipsum dolor sit amet. Ab architecto repellat et sint galisum in nostrum nihil non rerum voluptate. Sed nisi praesentium aut doloribus alias ut voluptate dolores. At consequatur voluptatem in labore natus qui maiores quam et velit cupiditate aut dolor nesciunt. Ut rerum quod qui inventore enim et sapiente minus nam esse commodi. Aut quam voluptatem non suscipit dolores cum aspernatur molestias cum rerum magni est molestiae provident id facilis rerum sit expedita distinctio. Et repudiandae voluptates quo eius voluptas quo iste aut eligendi architecto qui aspernatur quaerat id dolor deleniti ut libero eligendi? Aut Quis nihil At recusandae rerum sit magni aliquam ut aliquid quis hic repellendus quos eos voluptas aliquam qui sint animi. Ut veritatis saepe qui fugiat nulla cum numquam soluta sit repellendus quisquam eos molestias sint.</p>
+        </div>
+    </div>
+</div>
+
+    <div class="all-comunidade">
+        <p>Artes Populares</p>
     </div>
 
-<?php get_footer(); ?>
+    <div class="all-games">
+        <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+                <div class="container-shopGames">
+                    <img src="" alt="">
+                    <div class="container-imgArt">
+                        <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
+                    </div>
+                    <p><?php the_title(); ?></p>
+                </div>
+        <?php endwhile;
+        endif; ?>
+    </div>
+
+    <?php get_footer(); ?>
