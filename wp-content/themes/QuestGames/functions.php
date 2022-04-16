@@ -73,3 +73,15 @@ function woo_load_response_modal($passed, $product_id, $quantity)
 }
 add_filter('woocommerce_add_to_cart_validation', 'woo_load_response_modal', 10, 3);
 
+function questgames_admin_color_scheme() {
+    //Get the theme directory
+    $theme_dir = get_stylesheet_directory_uri();
+  
+    //Questgames
+    wp_admin_css_color( 'questgames', __( 'Questgames' ),
+      $theme_dir . '/questgames.css',
+      array( '#151617', '#fff', '#0c9e35' , '#0c9e35')
+    );
+  }
+  add_action('admin_init', 'questgames_admin_color_scheme');
+  

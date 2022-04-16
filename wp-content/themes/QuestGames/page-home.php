@@ -22,7 +22,11 @@ $banner = new WP_Query($bannerArgs);
 $categoriesArgs = array(
     'taxonomy' => 'product_cat',
 );
-$categories = new WP_Query($categoriesArgs);
+$all_categories = get_categories($categoriesArgs);
+
+// echo '<div style="background-color:#ffffff">';
+// var_dump($all_categories);
+// echo '</div>';
 
 ?>
 
@@ -81,13 +85,26 @@ $categories = new WP_Query($categoriesArgs);
     <p>Categorias</p>
 </div>
 <div class="all-categories">
-    <div class="container-img-categories">
-        <img src="" alt="">
-    </div>
+    <?php foreach ($all_categories as $category) : ?>
+        <?php
+        $category_id =  $category->term_id;
+        $thumbnail_id = get_term_meta($category_id, 'thumbnail_id', true);
+        $category_image = wp_get_attachment_url($thumbnail_id);
+        $category_link = get_term_link($category_id, 'product_cat');
+        ?>
+        <div class="category_card">
+             <div class="category_card__content">
+            <h3 class="category_title"><?php echo $category->name ?></h3>
+            </div>
+            <div class="category_card__image">
+            <img src="<?php echo $category_image; ?>" alt="<?php echo $category->name ?>">
+        </div>
+        </div>
+    <?php endforeach; ?>
 </div>
 
 <div class="questgames-banner">
-<img src="wp-content/uploads/test/banner-socials.png" alt="">
+    <img src="wp-content/uploads/test/banner-socials.png" alt="">
 </div>
 
 <div class="all-Path">
@@ -129,21 +146,21 @@ $categories = new WP_Query($categoriesArgs);
     </div>
 </div>
 
-    <div class="all-comunidade">
-        <p>Artes Populares</p>
-    </div>
+<div class="all-comunidade">
+    <p>Artes Populares</p>
+</div>
 
-    <div class="all-games">
-        <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-                <div class="container-shopGames">
-                    <img src="" alt="">
-                    <div class="container-imgArt">
-                        <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
-                    </div>
-                    <p><?php the_title(); ?></p>
+<div class="all-games">
+    <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+            <div class="container-shopGames">
+                <img src="" alt="">
+                <div class="container-imgArt">
+                    <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
                 </div>
-        <?php endwhile;
-        endif; ?>
-    </div>
+                <p><?php the_title(); ?></p>
+            </div>
+    <?php endwhile;
+    endif; ?>
+</div>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
