@@ -1,0 +1,55 @@
+.perfil{
+    color: #ffffff;
+    padding: 0px 50px;
+    margin: 50px 0px;
+}
+
+.perfil a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.perfil a:hover{
+    color: var(--cor-retoques);
+}
+
+.woocommerce-info {
+    color: #ffffff;
+    border-top-color: var(--cor-retoques);
+    background-color: var(--cor-secundaria);
+}
+
+.woocommerce-info::before {
+    color: var(--cor-retoques);
+}
+
+.woocommerce a.button:hover{
+background-color: var(--cor-retoques);
+color: #ffffff;
+}
+
+.woocommerce button.button{
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.woocommerce button.button:hover{
+    background-color: var(--cor-retoques);
+    color: #ffffff;  
+}
+
+.woocommerce form .form-row input{
+    border: 3px solid #323232;
+    border-radius: 5px!important;
+    padding: 2px 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.woocommerce form .form-row input:focus{
+    border: 3px solid var(--cor-retoques);
+}
+
+.woocommerce form .form-row .required {
+    color: var(--cor-retoques);
+}

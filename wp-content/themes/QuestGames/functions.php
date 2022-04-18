@@ -16,6 +16,7 @@ function add_theme_styles()
     wp_enqueue_style('Home', get_template_directory_uri() . '/assets/css/home.css');
     wp_enqueue_style('Cadastro', get_template_directory_uri() . '/assets/css/cadastro.css');
     wp_enqueue_style('Login', get_template_directory_uri() . '/assets/css/login.css');
+    wp_enqueue_style('perfil', get_template_directory_uri() . '/assets/css/perfil.css');
 }
 
 
