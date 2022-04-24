@@ -17,6 +17,7 @@ function add_theme_styles()
     wp_enqueue_style('Cadastro', get_template_directory_uri() . '/assets/css/cadastro.css');
     wp_enqueue_style('Login', get_template_directory_uri() . '/assets/css/login.css');
     wp_enqueue_style('perfil', get_template_directory_uri() . '/assets/css/perfil.css');
+    wp_enqueue_style('search', get_template_directory_uri() . '/assets/css/search.css');
 }
 
 
@@ -27,9 +28,17 @@ function add_theme_scripts()
     wp_enqueue_script('home', get_template_directory_uri() . '/assets/js/home.js', array(), '1.0', true);
 
     //ion-icon
-
     wp_enqueue_script('ion-icons-module', 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js', array(), '5.5.2', true);
     wp_enqueue_script('ion-icons-nomodule', 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js', array(), '5.5.2', true);
+
+    // jQuery.
+    wp_enqueue_script( 'jquery' );
+    
+    // Ajax.
+    wp_enqueue_script('ajax-script', get_template_directory_uri() . '/assets/js/morePostsSearch.js', array('jquery'));
+    wp_localize_script('ajax-script', 'ajax_posts', array('ajax_url' => admin_url('admin-ajax.php')));
+
+  
 }
 
 add_action('wp_enqueue_scripts', 'add_theme_styles');
@@ -86,3 +95,57 @@ function questgames_admin_color_scheme() {
   }
   add_action('admin_init', 'questgames_admin_color_scheme');
   
+
+ 
+  function more_post_ajax()
+  {
+  
+      $gameName = (isset($_POST['gameName'])) ? $_POST['gameName'] : '';
+      $gameCategory = (isset($_POST['gameCategory'])) ? $_POST["gameCategory"] : '';
+      $gameOrder = (isset($_POST['gameOrder'])) ? $_POST['gameOrder'] : '';
+
+      header("Content-Type: text/html");
+  
+      
+      $search_games_args = array(
+        'numberposts'    => -1,
+        'post_type'        => 'product',
+        'product_cat' => $gameCategory,
+        'orderby'   => 'name',
+        'order' => $gameOrder,
+        's' => $gameName,
+
+            );
+
+            $search_games = new WP_Query($search_games_args);
+            $out = '';
+            $out .= '<h1 class="search__info">Resultados para busca: <span>'.$gameName.'</span></h1>';
+            $out .='<div class="search__results" >';
+            if($search_games->have_posts()): while($search_games->have_posts()): $search_games->the_post();
+
+            $game_link = get_the_permalink();
+            $game_title = get_the_title();
+            $game_image = get_the_post_thumbnail_url();
+
+                     $out .= '<a class="search__results__card" href="'.$game_link.'">
+                    <div class="search__results__card__image">
+                        <img src="'.$game_image.'" alt="'.$game_title.'">
+                     </div>
+                     <h2 class="search__results__card__title">'.$game_title.'</h2>
+                 </a>';
+
+        endwhile;
+        $out .='</div>';
+                 wp_reset_postdata();
+                die($out);
+            
+        else:
+                $out .= '<h1 class="search__results__noResults">Sem Resultados</h1>';
+                $out .='</div>';
+               die($out);
+        endif;
+    
+  }
+  
+  add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+  add_action('wp_ajax_more_post_ajax', 'more_post_ajax'); 

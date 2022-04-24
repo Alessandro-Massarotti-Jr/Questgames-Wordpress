@@ -89,7 +89,46 @@ header {
     .sidenav {
         padding-top: 15px;
     }
+
     .sidenav a {
         font-size: 18px;
     }
+}
+
+.searchForm {
+    margin: auto 0;
+    margin-right: 10px;
+
+}
+
+.searchForm div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: 3px solid #323232;
+    border-radius: 5px;
+}
+
+.searchForm input {
+    padding: 3px 5px;
+}
+
+.searchForm button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    color: var(--cor-secundaria);
+    border: none;
+    border-left: 2px solid var(--cor-secundaria);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.searchForm button:hover {
+    background-color: var(--cor-retoques);
+    color: #ffffff;
 }

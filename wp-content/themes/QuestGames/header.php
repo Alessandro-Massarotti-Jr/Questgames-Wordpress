@@ -55,6 +55,16 @@
 
         <img src="<?php echo get_template_directory_uri() . '/assets/image/logo.png' ?>" alt="logo" class="logo">
 
+
+        <form class="searchForm" action="search">
+            <div class="">
+                <input type="search" id="search" name="search" placeholder="Pesquisar Games..." class="" />
+                <button type="submit" class="">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+        </form>
+
     </header>
 
     <div id="main">
