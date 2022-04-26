@@ -67,16 +67,22 @@ $all_categories = get_categories($categoriesArgs);
         <p>Jogos em destaque</p>
     </div>
     <div class="all-games">
-        <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-                <div class="container-shopGames">
-                    <div class="container-img">
-                        <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
+        <div class="grid-container">
+            <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+                    <div class="container-shopGames">
+                        <div class="container-img">
+                            <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
+                        </div>
+                        <div class="container-txt">
+                            <p><?php the_title(); ?></p>
+                            <a href="<?php echo the_permalink() ?>">
+                                <ion-icon class="icons" name="cart"></ion-icon>
+                            </a>
+                        </div>
                     </div>
-                    <p><?php the_title(); ?></p>
-                    <a href="<?php echo the_permalink() ?>">Ir para página</a>
-                </div>
-        <?php endwhile;
-        endif; ?>
+            <?php endwhile;
+            endif; ?>
+        </div>
     </div>
 
 </div>
@@ -85,26 +91,31 @@ $all_categories = get_categories($categoriesArgs);
     <p>Categorias</p>
 </div>
 <div class="all-categories">
+    <?php 
+    $count = 0;
+    ?>
     <?php foreach ($all_categories as $category) : ?>
         <?php
+        
+         
         $category_id =  $category->term_id;
         $thumbnail_id = get_term_meta($category_id, 'thumbnail_id', true);
         $category_image = wp_get_attachment_url($thumbnail_id);
         $category_link = get_term_link($category_id, 'product_cat');
         ?>
-        <div class="category_card">
-             <div class="category_card__content">
-            <h3 class="category_title"><?php echo $category->name ?></h3>
+        <?php
+        $count++;
+        if ($count < 5) {?>
+            <div class="category_card">
+                <div class="category_card__content">
+                    <h3 class="category_title"><?php echo $category->name ?></h3>
+                </div>
+                <div class="category_card__image">
+                    <img src="<?php echo $category_image; ?>" alt="<?php echo $category->name ?>">
+                </div>
             </div>
-            <div class="category_card__image">
-            <img src="<?php echo $category_image; ?>" alt="<?php echo $category->name ?>">
-        </div>
-        </div>
+        <?php } ?>
     <?php endforeach; ?>
-</div>
-
-<div class="questgames-banner">
-    <img src="wp-content/uploads/test/banner-socials.png" alt="">
 </div>
 
 <div class="all-Path">
@@ -123,7 +134,6 @@ $all_categories = get_categories($categoriesArgs);
                 <p>Lorem ipsum dolor sit amet. Ab architecto repellat et sint galisum in nostrum nihil non rerum voluptate. Sed nisi praesentium aut doloribus alias ut voluptate dolores. At consequatur voluptatem in labore natus qui maiores quam et velit cupiditate aut dolor nesciunt. Ut rerum quod qui inventore enim et sapiente minus nam esse commodi. Aut quam voluptatem non suscipit dolores cum aspernatur molestias cum rerum magni est molestiae provident id facilis rerum sit expedita distinctio. Et repudiandae voluptates quo eius voluptas quo iste aut eligendi architecto qui aspernatur quaerat id dolor deleniti ut libero eligendi? Aut Quis nihil At recusandae rerum sit magni aliquam ut aliquid quis hic repellendus quos eos voluptas aliquam qui sint animi. Ut veritatis saepe qui fugiat nulla cum numquam soluta sit repellendus quisquam eos molestias sint.</p>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -133,8 +143,8 @@ $all_categories = get_categories($categoriesArgs);
 
 <div class="all-pathnotes">
     <div class="container-path">
-        <div class="container-img-path">
-            <img src="wp-content/uploads/test/pathnote.png" alt="">
+        <div class="container-img-sereia">
+            <img src="wp-content/uploads/test/sereia.png" alt="">
         </div>
         <div class="container-path-txt">
             <div class="container-img-post">
@@ -142,6 +152,9 @@ $all_categories = get_categories($categoriesArgs);
             </div>
             <p class="title">Titulo</p>
             <p>Lorem ipsum dolor sit amet. Ab architecto repellat et sint galisum in nostrum nihil non rerum voluptate. Sed nisi praesentium aut doloribus alias ut voluptate dolores. At consequatur voluptatem in labore natus qui maiores quam et velit cupiditate aut dolor nesciunt. Ut rerum quod qui inventore enim et sapiente minus nam esse commodi. Aut quam voluptatem non suscipit dolores cum aspernatur molestias cum rerum magni est molestiae provident id facilis rerum sit expedita distinctio. Et repudiandae voluptates quo eius voluptas quo iste aut eligendi architecto qui aspernatur quaerat id dolor deleniti ut libero eligendi? Aut Quis nihil At recusandae rerum sit magni aliquam ut aliquid quis hic repellendus quos eos voluptas aliquam qui sint animi. Ut veritatis saepe qui fugiat nulla cum numquam soluta sit repellendus quisquam eos molestias sint.</p>
+        </div>
+        <div class="container-img-guerreiro">
+            <img src="wp-content/uploads/test/guerreiro.png" alt="">
         </div>
     </div>
 </div>
@@ -152,12 +165,14 @@ $all_categories = get_categories($categoriesArgs);
 
 <div class="all-games">
     <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
-            <div class="container-shopGames">
-                <img src="" alt="">
+            <div class="container-artGames">
                 <div class="container-imgArt">
                     <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
                 </div>
-                <p><?php the_title(); ?></p>
+                <div class="container-text">
+                    <p><?php the_title(); ?></p>
+                    <p>{Author}</p>
+                </div>
             </div>
     <?php endwhile;
     endif; ?>
