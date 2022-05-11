@@ -27,6 +27,10 @@ Version: 1.0
     font-family: 'Poppins', sans-serif;
 }
 
+table,h1,h2,h3,h4,h5,span,p{
+    color: #ffffff;
+}
+
 body {
     background-color: var(--cor-principal);
     min-height: 100vh;

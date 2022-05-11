@@ -45,7 +45,7 @@ $price = $product->get_price();
 
 
 
-    <h3>ID: <?php echo the_ID() ?></h3>
+    <!-- <h3>ID: <?php echo the_ID() ?></h3> -->
 
 
     <!-- <img src="<?php the_post_thumbnail_url('post_image') ?>" alt=""> -->
