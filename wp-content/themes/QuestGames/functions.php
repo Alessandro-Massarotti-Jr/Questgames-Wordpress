@@ -18,6 +18,7 @@ function add_theme_styles()
     wp_enqueue_style('Login', get_template_directory_uri() . '/assets/css/login.css');
     wp_enqueue_style('perfil', get_template_directory_uri() . '/assets/css/perfil.css');
     wp_enqueue_style('search', get_template_directory_uri() . '/assets/css/search.css');
+    wp_enqueue_style('categorias', get_template_directory_uri() . '/assets/css/categorias.css');
 }
 
 
