@@ -27,6 +27,7 @@ function add_theme_scripts()
     //	wp_enqueue_script( 'nome', 'url ou local do arquivo', array(dependencias), 'versão Ex: 1.0, 1.2' , posição do script(false no header, true no footer));
     wp_enqueue_script('header', get_template_directory_uri() . '/assets/js/header.js');
     wp_enqueue_script('home', get_template_directory_uri() . '/assets/js/home.js', array(), '1.0', true);
+    wp_enqueue_script('categorias', get_template_directory_uri() . '/assets/js/categorias.js');
 
     //ion-icon
     wp_enqueue_script('ion-icons-module', 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js', array(), '5.5.2', true);

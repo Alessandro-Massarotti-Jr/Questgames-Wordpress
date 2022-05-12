@@ -13,6 +13,11 @@ $all_categories = get_categories($categoriesArgs);
 <div class="categorias">
     <div class="categorias__title">
      <h1>Categorias</h1>
+     <div class="categorias__title__search">
+         <label for="filterCategoryByName">Pesquisar:</label>
+     <input name="filterCategoryByName" placeholder="Categoria..." id="filterCategoryByName" type="text">
+     <button type="button" class=""><ion-icon name="search-outline"></ion-icon></button>
+     </div>
     </div>
     <div class="categorias__cards">
         <?php foreach ($all_categories as $category) : ?>
@@ -21,7 +26,7 @@ $all_categories = get_categories($categoriesArgs);
             ?>
             <?php if ($icone_url) : ?>
 
-                <div class="categoryCard">
+                <div class="categoryCard active" cardName="<?php echo $category->name ?>">
                     <div class="categoryCard__image">
                         <img src="<?php echo $icone_url ?>" alt="<?php echo $category->name ?>">
                     </div>
@@ -30,7 +35,7 @@ $all_categories = get_categories($categoriesArgs);
                     <a class="categoryCard__button" href="/">ver jogos</a>
                 </div>
             <?php else : ?>
-                <div class="categoryCard">
+                <div class="categoryCard active" cardName="<?php echo $category->name ?>">
                     <div class="categoryCard__image">
                         <span>
                             <ion-icon name="game-controller-outline"></ion-icon>
