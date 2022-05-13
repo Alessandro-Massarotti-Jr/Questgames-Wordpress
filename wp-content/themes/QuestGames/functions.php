@@ -151,3 +151,6 @@ function questgames_admin_color_scheme() {
   
   add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
   add_action('wp_ajax_more_post_ajax', 'more_post_ajax'); 
+
+  /* Disable WordPress Admin Bar for all users */
+add_filter( 'show_admin_bar', '__return_false' );

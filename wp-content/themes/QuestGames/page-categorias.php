@@ -32,7 +32,7 @@ $all_categories = get_categories($categoriesArgs);
                     </div>
                     <h2 class="categoryCard__title"><?php echo $category->name ?></h2>
                     <p class="categoryCard__description"><?php echo $category->description ?></p>
-                    <a class="categoryCard__button" href="/">ver jogos</a>
+                    <a class="categoryCard__button" href="<?php echo home_url() . '/categoria-jogos?categoria='.$category->name ?>">ver jogos</a>
                 </div>
             <?php else : ?>
                 <div class="categoryCard active" cardName="<?php echo $category->name ?>">
@@ -43,7 +43,7 @@ $all_categories = get_categories($categoriesArgs);
                     </div>
                     <h2 class="categoryCard__title"><?php echo $category->name ?></h2>
                     <p class="categoryCard__description"><?php echo $category->description ?></p>
-                    <a class="categoryCard__button" href="/">ver jogos</a>
+                    <a class="categoryCard__button" href="<?php echo home_url() . '/categoria-jogos?categoria='.$category->name ?>">ver jogos</a>
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
