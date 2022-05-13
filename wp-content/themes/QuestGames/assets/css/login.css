@@ -1,124 +1,120 @@
-.login{
+.login {
     display: flex;
     justify-content: space-between;
 }
 
-.login .image{
+.login .image {
     width: 50%;
     height: 100vh;
 }
 
-.login .image img{
+.login .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.login .form{
+.login .form {
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
-    background: linear-gradient(45deg, #000000,#000000, #202020);
+    background: linear-gradient(45deg, #000000, #000000, #202020);
 }
 
-.login .form form{
-    border:none;
+.login .form form {
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.login .flex-form-row{
+.login .flex-form-row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.login .form form input{
+.login .form form input {
     border: 3px solid #323232;
     border-radius: 5px!important;
 }
 
-.login .form form input:focus{
+.login .form form input:focus {
     border: 3px solid var(--cor-retoques);
 }
 
-.login .form form .submit{
-background-color: #000000;
-color: #ffffff;
-border-radius: 3px;
-transition: 0.3s;
-margin-top: 10px;
-margin-bottom: 10px;
-cursor: pointer;
+.login .form form .submit {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 3px;
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.login .form form .submit input{
-        background-color: #000000;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-        border-radius: 3px;
-        transition: 0.3s;
-        cursor: pointer;
+.login .form form .submit input {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-
-.login .form form .submit:hover{ 
-   color: var(--cor-retoques);
-}
-            
-
-.login .form form .submit:hover input{ 
-color: var(--cor-retoques);
-border: 2px solid var(--cor-retoques);
-
+.login .form form .submit:hover {
+    color: var(--cor-retoques);
 }
 
-.login .form .homeBtn{
+.login .form form .submit:hover input {
+    color: var(--cor-retoques);
+    border: 2px solid var(--cor-retoques);
+}
+
+.login .form .homeBtn {
     color: #ffffff;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.login .form .homeBtn:hover{
+.login .form .homeBtn:hover {
     color: var(--cor-retoques);
 }
 
-@media(max-width:767px){
-
-    .login .image{
+@media(max-width:767px) {
+    .login .image {
         display: none;
     }
-    .login .form{
+    .login .form {
         width: 100%;
         height: 100vh;
     }
-    .login .form  form{
+    .login .form form {
         z-index: 2;
     }
-    .login .form form .submit{
+    .login .form form .submit {
         background-color: transparent;
     }
-    .login .form .homeBtn{
+    .login .form .homeBtn {
         z-index: 2;
     }
-    .login .form::after{
+    .login .form::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 100vh;
-      background: url(../image/Flogin.png);
-      z-index: 0;
-      background-position: center;
-      background-size: cover;
+        background: url(../image/Flogin.png);
+        z-index: 0;
+        background-position: center;
+        background-size: cover;
     }
-    .login .form::before{
+    .login .form::before {
         content: '';
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         position: absolute;
         width: 100%;
         height: 100%;
