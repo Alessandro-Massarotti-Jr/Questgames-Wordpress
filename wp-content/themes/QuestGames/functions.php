@@ -19,6 +19,7 @@ function add_theme_styles()
     wp_enqueue_style('Login', get_template_directory_uri() . '/assets/css/login.css');
     wp_enqueue_style('perfil', get_template_directory_uri() . '/assets/css/perfil.css');
     wp_enqueue_style('search', get_template_directory_uri() . '/assets/css/search.css');
+    wp_enqueue_style('categorias', get_template_directory_uri() . '/assets/css/categorias.css');
 }
 
 
@@ -27,6 +28,7 @@ function add_theme_scripts()
     //	wp_enqueue_script( 'nome', 'url ou local do arquivo', array(dependencias), 'versão Ex: 1.0, 1.2' , posição do script(false no header, true no footer));
     wp_enqueue_script('header', get_template_directory_uri() . '/assets/js/header.js');
     wp_enqueue_script('home', get_template_directory_uri() . '/assets/js/home.js', array(), '1.0', true);
+    wp_enqueue_script('categorias', get_template_directory_uri() . '/assets/js/categorias.js');
 
     //ion-icon
     wp_enqueue_script('ion-icons-module', 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js', array(), '5.5.2', true);
@@ -148,3 +150,6 @@ function questgames_admin_color_scheme() {
   
   add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
   add_action('wp_ajax_more_post_ajax', 'more_post_ajax'); 
+
+  /* Disable WordPress Admin Bar for all users */
+add_filter( 'show_admin_bar', '__return_false' );

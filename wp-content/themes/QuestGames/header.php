@@ -21,7 +21,7 @@
             <a href="<?php echo home_url() . '/carrinho' ?>">
                 <ion-icon class="icons" name="cart-outline"></ion-icon>Carrinho
             </a>
-            <a href="/">
+            <a href="<?php echo home_url() . '/categorias' ?>">
                 <ion-icon class="icons" name="pricetag-outline"></ion-icon>Categorias
             </a>
 
