@@ -4,7 +4,6 @@ Template Name: Biblioteca
 */
 ?>
 
-<?php get_header() ?>
 <?php
 global $post;
 $a=1; $b=1; $c=1; $d=1; $e=1; $f=1;
@@ -22,6 +21,12 @@ $gameArgs = array(
 $games = new WP_Query($gameArgs);
 ?>
 
+<!-- <?php $current_user = wp_get_current_user();
+$downloads = wc_get_customer_available_downloads($current_user->id);
+var_dump($downloads);
+?> -->
+
+<?php get_header() ?>
 <div class="container-master">
     <div class="container-left">
         <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
