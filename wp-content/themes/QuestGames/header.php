@@ -30,7 +30,7 @@
             </a> -->
 
             <?php if (is_user_logged_in()) : ?>
-                <a href="<?php echo home_url() . '/perfil/downloads/' ?>">
+                <a href="<?php echo home_url() . '/biblioteca/' ?>">
                     <ion-icon class="icons" name="library-outline"></ion-icon>Biblioteca
                 </a>
                 <a href="<?php echo home_url() . '/perfil' ?>">

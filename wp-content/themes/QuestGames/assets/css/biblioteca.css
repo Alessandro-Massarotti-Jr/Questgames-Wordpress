@@ -9,6 +9,8 @@
 .container-left {
     width: 45%;
     background-color: var(--cor-quaternaria);
+    overflow: auto;
+    height: 500px;
 }
 
 .container-game {
@@ -71,4 +73,12 @@
     border-radius: 8px;
     text-decoration: none;
     color: #ffffff;
+}
+
+#buttonDownload {
+    display: none;
+}
+
+#container-img {
+    display: none;
 }
