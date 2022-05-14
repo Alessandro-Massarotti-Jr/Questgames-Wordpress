@@ -106,14 +106,14 @@ $all_categories = get_categories($categoriesArgs);
         <?php
         $count++;
         if ($count < 5) {?>
-            <div class="category_card">
+            <a href="<?php echo home_url() . '/categoria-jogos?categoria='.$category->name ?>"class="category_card">
                 <div class="category_card__content">
                     <h3 class="category_title"><?php echo $category->name ?></h3>
                 </div>
                 <div class="category_card__image">
                     <img src="<?php echo $category_image; ?>" alt="<?php echo $category->name ?>">
                 </div>
-            </div>
+        </a>
         <?php } ?>
     <?php endforeach; ?>
 </div>
