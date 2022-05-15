@@ -41,8 +41,9 @@ header {
     text-decoration: none;
     font-size: 25px;
     color: var(--cor-terciaria);
-    display: block;
+    display: flex;
     transition: 0.3s;
+    flex-wrap: nowrap;
 }
 
 
