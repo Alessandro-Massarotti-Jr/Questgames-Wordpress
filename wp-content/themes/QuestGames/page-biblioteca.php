@@ -39,7 +39,7 @@ $downloads = wc_get_customer_available_downloads($current_user->id);
                 $download_title = $download['product_name'];
                 $download_developer = get_field('desenvolvedor',$download_post_id);
                 $download_image = get_the_post_thumbnail_url($download_post_id,'post_image');
-                $download_launch_date = get_the_date('', $download_post_id)
+                $download_launch_date = get_the_date('d/m/y', $download_post_id)
                 ?>
                 <div onclick="clickGame()" class="container-game" id="container-games<?php echo $e++ ?>">
                     <div class="container-image-small">
