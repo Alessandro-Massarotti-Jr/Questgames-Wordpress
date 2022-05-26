@@ -154,7 +154,8 @@ function more_post_ajax()
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
-function library_ajax(){
+function library_ajax()
+{
     include_once(get_template_directory() . '/page-biblioteca.php');
 }
 add_action('wp_ajax_nopriv_library_ajax', 'library_ajax');
@@ -162,3 +163,44 @@ add_action('wp_ajax_more_library_ajax', 'library_ajax');
 
 /* Disable WordPress Admin Bar for all users */
 add_filter('show_admin_bar', '__return_false');
+
+
+
+function create_review()
+{
+    register_post_type(
+        'reviews',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('Reviews'),
+                'singular_name' => __('reviews')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => array('slug' => 'reviews'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action('init', 'create_review');
+
+
+function create_path()
+{
+    register_post_type(
+        'pathnotes',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('Pathnotes'),
+                'singular_name' => __('pathnotes')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => array('slug' => 'pathnotes'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action('init', 'create_path');

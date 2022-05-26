@@ -68,7 +68,12 @@ $all_categories = get_categories($categoriesArgs);
     </div>
     <div class="all-games">
         <div class="grid-container">
+            <?php $i=0;?>
             <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+                   
+                    <?php $i++;
+                     if ($i < 6) {?> 
+
                     <div class="container-shopGames">
                         <div class="container-img">
                             <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
@@ -80,6 +85,7 @@ $all_categories = get_categories($categoriesArgs);
                             </a>
                         </div>
                     </div>
+                    <?php } ?>
             <?php endwhile;
             endif; ?>
         </div>
@@ -128,6 +134,7 @@ $all_categories = get_categories($categoriesArgs);
         </div>
         <div class="container-review-txt">
             <div class="title">
+                <p class="nickname">{author}</p>
                 <p>{Título game} {like or deslike)</p>
             </div>
             <div class="description">
@@ -164,7 +171,10 @@ $all_categories = get_categories($categoriesArgs);
 </div>
 
 <div class="all-games">
+    <?php $count2 = 0 ?>
     <?php if ($games->have_posts()) : while ($games->have_posts()) : $games->the_post() ?>
+            <?php $count2++; ?>
+                    <?php if ($count2 < 5) {?>
             <div class="container-artGames">
                 <div class="container-imgArt">
                     <img src="<?php the_post_thumbnail_url('post_image') ?>" alt="<?php the_title() ?>">
@@ -174,6 +184,7 @@ $all_categories = get_categories($categoriesArgs);
                     <p>{Author}</p>
                 </div>
             </div>
+            <?php }?>
     <?php endwhile;
     endif; ?>
 </div>
