@@ -166,12 +166,11 @@ add_action('wp_ajax_more_library_ajax', 'library_ajax');
 add_filter('show_admin_bar', '__return_false');
 
 
-
+//review de usuarios
 function create_review()
 {
     register_post_type(
         'reviews',
-        // CPT Options
         array(
             'labels' => array(
                 'name' => __('Reviews'),
@@ -183,15 +182,13 @@ function create_review()
         )
     );
 }
-// Hooking up our function to theme setup
 add_action('init', 'create_review');
 
-
+//pathnotes
 function create_path()
 {
     register_post_type(
         'pathnotes',
-        // CPT Options
         array(
             'labels' => array(
                 'name' => __('Pathnotes'),
@@ -203,5 +200,6 @@ function create_path()
         )
     );
 }
-// Hooking up our function to theme setup
 add_action('init', 'create_path');
+
+
