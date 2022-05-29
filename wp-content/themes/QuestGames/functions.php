@@ -21,6 +21,7 @@ function add_theme_styles()
     wp_enqueue_style('search', get_template_directory_uri() . '/assets/css/search.css');
     wp_enqueue_style('categorias', get_template_directory_uri() . '/assets/css/categorias.css');
     wp_enqueue_style('categoriasJogos', get_template_directory_uri() . '/assets/css/categoriasJogos.css');
+    wp_enqueue_style('woocommerce', get_template_directory_uri() . '/assets/css/woocommerce.css');
 }
 
 
