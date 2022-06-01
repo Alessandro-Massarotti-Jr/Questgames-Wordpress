@@ -1,64 +1,85 @@
-.woocommerce-cart-form{
-background-color: var(--cor-quaternaria);
+.woocommerce-cart-form {
+    background-color: var(--cor-quaternaria);
 }
 
-.product-name a{
+.product-name a {
     color: var(--cor-retoques);
 }
 
-.coupon{
+.coupon {
     display: flex;
     flex-direction: column;
 }
 
-.coupon input{
+.coupon input {
     width: 100% !important;
     margin-bottom: 5px!important;
 }
 
-.coupon button{
+.coupon button {
     width: 100% !important;
 }
 
-.checkout-button{
+.checkout-button {
     color: var(--cor-quaternaria)!important;
-   background-color:#ffffff!important;
-   transition: 0.3s ease-in-out;
-}
-
-.checkout-button:hover{
-background-color: var(--cor-retoques)!important;
-color: #ffffff!important;
-}
-
-.woocommerce-checkout-payment{
-    background-color: var(--cor-quaternaria)!important;
-    color: #ffffff!important;
-}
-
-.payment_box p{
-    color: var(--cor-quaternaria)!important;
-}
-
-.woocommerce-privacy-policy-text p a{
-    color:var(--cor-retoques)!important;
-}
-
-.woocommerce-checkout-payment button{
-    color: var(--cor-quaternaria)!important;
-    background-color:#ffffff!important;
+    background-color: #ffffff!important;
     transition: 0.3s ease-in-out;
 }
 
-.woocommerce-checkout-payment button:hover{
+.checkout-button:hover {
     background-color: var(--cor-retoques)!important;
     color: #ffffff!important;
 }
 
-.woocommerce-thankyou-order-details{
-    color:#ffffff!important;
+.woocommerce-checkout-payment {
+    background-color: var(--cor-quaternaria)!important;
+    color: #ffffff!important;
 }
 
-.woocommerce-customer-details{
-    color:#ffffff!important
+.payment_box p {
+    color: var(--cor-quaternaria)!important;
+}
+
+.woocommerce-privacy-policy-text p a {
+    color: var(--cor-retoques)!important;
+}
+
+.woocommerce-checkout-payment button {
+    color: var(--cor-quaternaria)!important;
+    background-color: #ffffff!important;
+    transition: 0.3s ease-in-out;
+}
+
+.woocommerce-checkout-payment button:hover {
+    background-color: var(--cor-retoques)!important;
+    color: #ffffff!important;
+}
+
+.woocommerce-thankyou-order-details {
+    color: #ffffff!important;
+}
+
+.woocommerce-customer-details {
+    color: #ffffff!important
+}
+
+.head {
+    display: none;
+}
+
+@media (max-width: 1350px) {
+    .head {
+        top: 0;
+        width: 100%;
+        display: flex;
+        background-color: #212121;
+    }
+    .head a {
+        color: white;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .head a:hover {
+        color: var(--cor-retoques);
+    }
 }

@@ -50,11 +50,6 @@ $all_categories = get_categories($categoriesArgs);
         <a href="<?php echo home_url() . '/categorias' ?>">
             <ion-icon class="icons" name="pricetag-outline"></ion-icon>
         </a>
-
-        <!-- <a href="/">
-                <ion-icon class="icons" name="settings-outline"></ion-icon>Configurações
-            </a> -->
-
         <?php if (is_user_logged_in()) : ?>
             <a href="<?php echo home_url() . '/biblioteca/' ?>">
                 <ion-icon class="icons" name="library-outline"></ion-icon>

@@ -1,96 +1,116 @@
-.cadastro{
+.cadastro {
     display: flex;
     justify-content: space-between;
 }
 
-.cadastro .image{
+.cadastro .image {
     width: 50%;
     height: 100vh;
 }
 
-.cadastro .image img{
+.cadastro .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.cadastro .form{
+.cadastro .form {
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
-    background: linear-gradient(45deg, #000000,#000000, #202020);
+    background: linear-gradient(45deg, #000000, #000000, #202020);
 }
 
-.cadastro .form .user-registration{
-    border:none;
+.cadastro .form .user-registration {
+    border: none;
 }
-.cadastro .form .user-registration input{
+
+.cadastro .form .user-registration input {
     border: 3px solid #323232;
     border-radius: 5px!important;
 }
 
-.cadastro .form .user-registration input:focus{
+.cadastro .form .user-registration input:focus {
     border: 3px solid var(--cor-retoques);
 }
 
-.cadastro .form .user-registration button{
-background-color: #000000;
-color: #ffffff;
-border: 2px solid #ffffff;
-border-radius: 3px;
-transition: 0.3s;
+.cadastro .form .user-registration button {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-.cadastro .form .user-registration button:hover{
-color: var(--cor-retoques);
-border: 2px solid var(--cor-retoques);
-
+.cadastro .form .user-registration button:hover {
+    color: var(--cor-retoques);
+    border: 2px solid var(--cor-retoques);
 }
 
-.cadastro .form .homeBtn{
+.cadastro .form .homeBtn {
     color: #ffffff;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.cadastro .form .homeBtn:hover{
+.cadastro .form .homeBtn:hover {
     color: var(--cor-retoques);
 }
 
-@media(max-width:767px){
+.head {
+    display: none;
+}
 
-    .cadastro .image{
+@media (max-width: 1350px) {
+    .head {
+        top: 0;
+        width: 100%;
+        display: flex;
+        background-color: #212121;
+    }
+    .head a {
+        color: white;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .head a:hover {
+        color: var(--cor-retoques);
+    }
+}
+
+@media(max-width:767px) {
+    .cadastro .image {
         display: none;
     }
-    .cadastro .form{
+    .cadastro .form {
         width: 100%;
         height: 100vh;
     }
-    .cadastro .form  .user-registration{
+    .cadastro .form .user-registration {
         z-index: 2;
     }
-    .cadastro .form .user-registration button{
+    .cadastro .form .user-registration button {
         background-color: transparent;
     }
-    .cadastro .form .homeBtn{
+    .cadastro .form .homeBtn {
         z-index: 2;
     }
-    .cadastro .form::after{
+    .cadastro .form::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 100vh;
-      background: url(../image/Flogin.png);
-      z-index: 0;
-      background-position: center;
-      background-size: cover;
+        background: url(../image/Flogin.png);
+        z-index: 0;
+        background-position: center;
+        background-size: cover;
     }
-    .cadastro .form::before{
+    .cadastro .form::before {
         content: '';
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0, 0, 0, 0.7);
         position: absolute;
         width: 100%;
         height: 100%;

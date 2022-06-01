@@ -50,7 +50,7 @@
     margin-right: 20px;
 }
 
-.gamePage .gamedescription .gameContent{
+.gamePage .gamedescription .gameContent {
     color: var(--cor-terciaria);
     background-color: var(--cor-secundaria);
     border-radius: 10px;
@@ -77,8 +77,8 @@
     margin-bottom: 10px;
 }
 
-.modal-container{
-    background-color: rgba(0,0,0,0.4);
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.4);
     width: 1000vh;
     height: 1000vh;
     position: fixed;
@@ -87,7 +87,8 @@
     z-index: 999;
     display: none;
 }
-.modal-container button{
+
+.modal-container button {
     background-color: var(--cor-secundaria);
     display: flex;
     justify-content: center;
@@ -105,13 +106,15 @@
     font-size: 30px;
 }
 
-.modal-container button:hover{
+.modal-container button:hover {
     color: var(--cor-retoques);
 }
-.modal-container.active{
+
+.modal-container.active {
     display: block;
 }
-.modal-success{
+
+.modal-success {
     position: fixed;
     background-color: var(--cor-principal);
     box-shadow: 0px 0px 60px 5px #0c9e35;
@@ -129,11 +132,11 @@
     display: none;
 }
 
-.modal-success.active{
-display: flex;
+.modal-success.active {
+    display: flex;
 }
 
-.modal-success a{
+.modal-success a {
     background-color: var(--cor-secundaria);
     display: flex;
     justify-content: center;
@@ -148,11 +151,11 @@ display: flex;
     margin-top: 20px;
 }
 
-.modal-success a:hover{
+.modal-success a:hover {
     color: var(--cor-retoques);
 }
 
-.modal-error{
+.modal-error {
     position: fixed;
     background-color: var(--cor-principal);
     box-shadow: 0px 0px 60px 5px #880b0b;
@@ -170,11 +173,11 @@ display: flex;
     display: none;
 }
 
-.modal-error.active{
+.modal-error.active {
     display: flex;
-    }
+}
 
-.modal-error a{
+.modal-error a {
     background-color: var(--cor-secundaria);
     display: flex;
     justify-content: center;
@@ -189,6 +192,27 @@ display: flex;
     margin-top: 20px;
 }
 
-.modal-error a:hover{
+.modal-error a:hover {
     color: var(--cor-retoques);
+}
+
+.head {
+    display: none;
+}
+
+@media (max-width: 1350px) {
+    .head {
+        top: 0;
+        width: 100%;
+        display: flex;
+        background-color: #212121;
+    }
+    .head a {
+        color: white;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .head a:hover {
+        color: var(--cor-retoques);
+    }
 }
