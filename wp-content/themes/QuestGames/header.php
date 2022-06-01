@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?>>
     <header>
-
+    
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                 <ion-icon name="menu-outline"></ion-icon>
@@ -46,6 +46,9 @@
             <?php endif; ?>
 
         </div>
+
+
+
 
 
         <!-- Abre a side bar -->

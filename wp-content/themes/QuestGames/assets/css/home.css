@@ -1,471 +1,505 @@
-                                    .home .bannerContainer {
-                                        width: 100%;
-                                        height: 500px;
-                                        overflow: hidden;
-                                    }
-                                    
-                                    .home .banner {
-                                        width: 300%;
-                                        height: 500px;
-                                        display: flex;
-                                        transition: 2s;
-                                    }
-                                    
-                                    .all-games .grid-container .container-shopGames .container-txt .icons {
-                                        height: 50px;
-                                        width: 50px;
-                                        text-decoration: none;
-                                    }
-                                    
-                                    .home .bannerItem {
-                                        width: 33.333333%;
-                                        transition: 2s;
-                                    }
-                                    
-                                    .home .bannerItemImage {
-                                        width: 100%;
-                                        height: 500px;
-                                    }
-                                    
-                                    .home .bannerItemImage img {
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    }
-                                    
-                                    .home .bannerNav {
-                                        position: relative;
-                                        display: flex;
-                                        top: -40px;
-                                        left: 45%;
-                                    }
-                                    
-                                    .home .bannerNav label input {
-                                        appearance: none;
-                                    }
-                                    
-                                    .home .bannerNav label {
-                                        background-color: transparent;
-                                        border: 2px solid #ffffff;
-                                        border-radius: 50%;
-                                        width: 20px;
-                                        height: 20px;
-                                        margin: 0px 10px;
-                                        cursor: pointer;
-                                        transition: 0.3s;
-                                    }
-                                    
-                                    .home .bannerNav label:hover {
-                                        border: 2px solid var(--cor-retoques)
-                                    }
-                                    
-                                    .home .bannerNav span {
-                                        width: 16px;
-                                        height: 16px;
-                                        background-color: transparent;
-                                        position: absolute;
-                                        border-radius: 50%;
-                                        top: 2px;
-                                        transition: 0.3s;
-                                    }
-                                    
-                                    .home .bannerNav label input:checked~span {
-                                        background-color: #ffffff;
-                                    }
-                                    
-                                    .home .bannerTitle {
-                                        position: absolute;
-                                        background-color: rgba(0, 0, 0, 0.8);
-                                        padding: 3px 60px;
-                                        color: #ffffff;
-                                        border-bottom-right-radius: 40px;
-                                        font-size: 40px;
-                                        font-weight: 400;
-                                        transition: 0.3s;
-                                    }
-                                    
-                                    .home .bannerItem:hover .bannerTitle {
-                                        color: var(--cor-retoques);
-                                    }
-                                    
-                                    .all-games,
-                                    .all-newGames,
-                                    .all-bestGames,
-                                    .all-categories,
-                                    .all-review,
-                                    .all-Path {
-                                        margin: 20px 0 20px 0;
-                                    }
-                                    
-                                    .all-gamesTitle {
-                                        display: flex;
-                                        flex-direction: column;
-                                        width: 100%;
-                                        margin-top: 57px;
-                                        background-color: #007F0E;
-                                    }
-                                    
-                                    .all-comunidade,
-                                    .all-Path {
-                                        display: flex;
-                                        flex-direction: column;
-                                        width: 100%;
-                                        background-color: #007F0E;
-                                    }
-                                    
-                                    .all-gamesTitle p,
-                                    .all-Path p,
-                                    .all-comunidade p {
-                                        font-size: 22px;
-                                        color: white;
-                                        text-align: center;
-                                    }
-                                    /*HOME GAMES*/
-                                    
-                                    .all-games {
-                                        display: flex;
-                                        flex-direction: row;
-                                        color: #ffffff;
-                                        flex-wrap: wrap;
-                                        justify-content: space-between;
-                                        justify-content: center;
-                                    }
-                                    
-                                    .all-games .grid-container {
-                                        display: grid;
-                                        grid-template-columns: 1.45fr 1fr 1fr 1fr;
-                                        grid-template-rows: 1fr 1fr;
-                                        grid-template-areas: "destaqueEsq destaqueEsq destaqueDir1 destaqueDir2" "destaqueEsq destaqueEsq destaqueDir3 destaqueDir4";
-                                        align-items: flex-start;
-                                        justify-items: center
-                                    }
-                                    
-                                    .all-games .grid-container .container-shopGames:first-child {
-                                        grid-area: destaqueEsq;
-                                        width: 100%;
-                                        height: 360px;
-                                        margin-right: 7px;
-                                    }
-                                    
-                                    .all-games .grid-container .container-shopGames {
-                                        grid-area: destaqueDir1, destaqueDir2, destaqueDir3, destaqueDir4;
-                                        border-radius: 5px;
-                                        width: 98%;
-                                        height: 150px;
-                                        margin: 20px 0 40px 5px;
-                                    }
-                                    
-                                    .all-games .container-shopGames .container-img {
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    }
-                                    
-                                    .all-games .container-shopGames .container-img img {
-                                        border-radius: 5px;
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    }
-                                    
-                                    .all-games .container-shopGames .container-txt p {
-                                        font-size: 18px;
-                                        margin-bottom: 5px;
-                                    }
-                                    
-                                    .all-games .container-shopGames .container-txt a {
-                                        text-decoration: none;
-                                        color: #ffffff;
-                                    }
-                                    
-                                    .all-games .container-shopGames .container-txt {
-                                        display: flex;
-                                        flex-direction: row;
-                                        justify-content: space-around;
-                                        align-items: center;
-                                        background-color: #007F0E;
-                                    }
-                                    
-                                    .all-games .container-shopGames a {
-                                        font-size: 14px;
-                                    }
-                                    /*HOME CATEGORIES*/
-                                    
-                                    .home .all-categories {
-                                        display: flex;
-                                        flex-direction: row;
-                                        justify-content: center;
-                                        flex-wrap: wrap;
-                                    }
-                                    
-                                    .home .all-categories .category_card {
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        width: 250px;
-                                        height: 500px;
-                                        margin: 10px 10px;
-                                        cursor: pointer;
-                                    }
-                                    
-                                    .category_card__content {
-                                        width: 250px;
-                                        height: 500px;
-                                        position: absolute;
-                                        z-index: 1;
-                                        background-color: rgba(0, 0, 0, 0.5);
-                                        display: flex;
-                                        flex-direction: row;
-                                        justify-content: center;
-                                        align-items: center;
-                                    }
-                                    
-                                    .category_card__image {
-                                        width: 250px;
-                                        height: 500px;
-                                        position: absolute;
-                                        overflow: hidden;
-                                    }
-                                    
-                                    .category_card__image img {
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                        transition: all 1s ease-in-out;
-                                    }
-                                    
-                                    .home .all-categories .category_card:hover .category_card__image img {
-                                        width: 120%;
-                                        height: 120%;
-                                    }
-                                    
-                                    .home .all-categories .category_card .category_title {
-                                        color: var(--cor-terciaria);
-                                    }
-                                    /*HOME REVIEW*/
-                                    
-                                    .all-review {
-                                        padding: 0 90px 0 90px;
-                                    }
-                                    
-                                    .container-review {
-                                        display: flex;
-                                        flex-direction: column;
-                                        align-items: center;
-                                        height: 450px;
-                                        width: 30%;
-                                        border-radius: 5px;
-                                        background-color: var(--cor-quaternaria);
-                                    }
-                                    
-                                    .container-review .container-review-img {
-                                        margin-top: 20px;
-                                        width: 35%;
-                                        height: 35%;
-                                    }
-                                    
-                                    .container-review .container-review-txt {
-                                        color: var(--cor-terciaria);
-                                        text-align: center;
-                                    }
-                                    
-                                    .container-review .container-review-txt .title,
-                                    .container-review .container-review-txt .description {
-                                        margin-top: 10px;
-                                    }
-                                    
-                                    .container-review .container-review-txt .description p {
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                        display: -webkit-box;
-                                        -webkit-line-clamp: 7;
-                                        -webkit-box-orient: vertical;
-                                        text-align: justify;
-                                        padding: 0 30px 0 30px;
-                                    }
-                                    
-                                    .container-review .container-review-img img {
-                                        width: 100%;
-                                        height: 100%;
-                                        border-radius: 100%;
-                                        object-fit: cover;
-                                    }
-                                    /*HOME PATH NOTE*/
-                                    
-                                    .container-path {
-                                        display: flex;
-                                        flex-direction: row;
-                                        align-items: flex-end;
-                                        justify-content: space-between;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-img-sereia {
-                                        height: 180px;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-img-sereia img,
-                                    .all-pathnotes .container-path .container-img-guerreiro img {
-                                        width: 100%;
-                                        height: 100%;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-img-guerreiro {
-                                        height: 400px;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-path-txt {
-                                        color: var(--cor-terciaria);
-                                        text-align: justify;
-                                        width: 40%;
-                                        height: 100%;
-                                        margin-bottom: 12px;
-                                        background-color: var(--cor-quaternaria);
-                                        right: 35%;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-path-txt .container-img-post {
-                                        width: 100%;
-                                        height: 100px;
-                                        object-fit: cover;
-                                        border-radius: 5px;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-path-txt .container-img-post img {
-                                        width: 100%;
-                                        height: 100px;
-                                        object-fit: cover;
-                                        border-radius: 5px;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-path-txt .title {
-                                        text-align: center;
-                                    }
-                                    
-                                    .all-pathnotes .container-path .container-path-txt p {
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                        display: -webkit-box;
-                                        -webkit-line-clamp: 10;
-                                        -webkit-box-orient: vertical;
-                                        text-align: justify;
-                                        padding: 0 30px 0 30px;
-                                    }
-                                    /* ARTES */
-                                    
-                                    .all-games .container-artGames {
-                                        margin: 20px 20px;
-                                    }
-                                    
-                                    .all-games .container-artGames .container-text p {
-                                        padding-bottom: 8px;
-                                        border-radius: 5px;
-                                    }
-                                    
-                                    .all-games .container-artGames .container-text {
-                                        display: flex;
-                                        flex-direction: row;
-                                        justify-content: space-around;
-                                        background-color: #007F0E;
-                                        border-radius: 5px;
-                                    }
-                                    
-                                    .all-games .container-artGames .container-imgArt {
-                                        width: 640px;
-                                        height: auto;
-                                        background-color: #007F0E;
-                                    }
-                                    
-                                    .all-games .container-artGames .container-imgArt img {
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    }
-                                    
-                                    @media (max-width: 1350px) {
-                                        .home .all-categories .category_card {
-                                            width: 160px;
-                                            height: 400px;
+                                        .home .bannerContainer {
+                                            width: 100%;
+                                            height: 500px;
+                                            overflow: hidden;
                                         }
-                                        .category_card__content {
-                                            width: 160px;
-                                            height: 400px;
+                                        
+                                        .home .banner {
+                                            width: 300%;
+                                            height: 500px;
+                                            display: flex;
+                                            transition: 2s;
                                         }
-                                        .category_card__image {
-                                            width: 160px;
-                                            height: 400px;
+                                        
+                                        .all-games .grid-container .container-shopGames .container-txt .icons {
+                                            height: 50px;
+                                            width: 50px;
+                                            text-decoration: none;
                                         }
-                                        .sidenav {
-                                            width: 0px;
+                                        
+                                        .home .bannerItem {
+                                            width: 33.333333%;
+                                            transition: 2s;
                                         }
-                                        #main {
-                                            margin-left: 0px;
+                                        
+                                        .home .bannerItemImage {
+                                            width: 100%;
+                                            height: 500px;
                                         }
-                                        .openbtn {
-                                            display: none;
+                                        
+                                        .home .bannerItemImage img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
                                         }
-                                        .all-games .grid-container {
+                                        
+                                        .home .bannerNav {
+                                            position: relative;
+                                            display: flex;
+                                            top: -40px;
+                                            left: 45%;
+                                        }
+                                        
+                                        .home .bannerNav label input {
+                                            appearance: none;
+                                        }
+                                        
+                                        .home .bannerNav label {
+                                            background-color: transparent;
+                                            border: 2px solid #ffffff;
+                                            border-radius: 50%;
+                                            width: 20px;
+                                            height: 20px;
+                                            margin: 0px 10px;
+                                            cursor: pointer;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .home .bannerNav label:hover {
+                                            border: 2px solid var(--cor-retoques)
+                                        }
+                                        
+                                        .home .bannerNav span {
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: transparent;
+                                            position: absolute;
+                                            border-radius: 50%;
+                                            top: 2px;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .home .bannerNav label input:checked~span {
+                                            background-color: #ffffff;
+                                        }
+                                        
+                                        .home .bannerTitle {
+                                            position: absolute;
+                                            background-color: rgba(0, 0, 0, 0.8);
+                                            padding: 3px 60px;
+                                            color: #ffffff;
+                                            border-bottom-right-radius: 40px;
+                                            font-size: 40px;
+                                            font-weight: 400;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .home .bannerItem:hover .bannerTitle {
+                                            color: var(--cor-retoques);
+                                        }
+                                        
+                                        .all-games,
+                                        .all-newGames,
+                                        .all-bestGames,
+                                        .all-categories,
+                                        .all-review,
+                                        .all-Path {
+                                            margin: 20px 0 20px 0;
+                                        }
+                                        
+                                        .all-gamesTitle {
+                                            display: flex;
+                                            flex-direction: column;
+                                            width: 100%;
+                                            margin-top: 57px;
+                                            background-color: #007F0E;
+                                        }
+                                        
+                                        .all-comunidade,
+                                        .all-Path {
+                                            display: flex;
+                                            flex-direction: column;
+                                            width: 100%;
+                                            background-color: #007F0E;
+                                        }
+                                        
+                                        .all-gamesTitle p,
+                                        .all-Path p,
+                                        .all-comunidade p {
+                                            font-size: 22px;
+                                            color: white;
+                                            text-align: center;
+                                        }
+                                        /*HOME GAMES*/
+                                        
+                                        .all-games {
                                             display: flex;
                                             flex-direction: row;
+                                            color: #ffffff;
                                             flex-wrap: wrap;
+                                            justify-content: space-between;
                                             justify-content: center;
                                         }
-                                        .all-games .grid-container .container-shopGames {
-                                            width: 30%;
-                                            height: 30%;
-                                            margin: 10px;
+                                        
+                                        .all-games .grid-container {
+                                            display: grid;
+                                            grid-template-columns: 1.45fr 1fr 1fr 1fr;
+                                            grid-template-rows: 1fr 1fr;
+                                            grid-template-areas: "destaqueEsq destaqueEsq destaqueDir1 destaqueDir2" "destaqueEsq destaqueEsq destaqueDir3 destaqueDir4";
+                                            align-items: flex-start;
+                                            justify-items: center
                                         }
+                                        
                                         .all-games .grid-container .container-shopGames:first-child {
-                                            width: 30%;
-                                            height: 30%;
-                                            margin: 10px;
-                                        }
-                                        .all-review .container-review {
-                                            width: 40%;
-                                        }
-                                        .all-games .container-artGames .container-imgArt {
+                                            grid-area: destaqueEsq;
                                             width: 100%;
+                                            height: 360px;
+                                            margin-right: 7px;
+                                        }
+                                        
+                                        .all-games .grid-container .container-shopGames {
+                                            grid-area: destaqueDir1, destaqueDir2, destaqueDir3, destaqueDir4;
+                                            border-radius: 5px;
+                                            width: 98%;
+                                            height: 150px;
+                                            margin: 20px 0 40px 5px;
+                                        }
+                                        
+                                        .all-games .container-shopGames .container-img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                        
+                                        .all-games .container-shopGames .container-img img {
+                                            border-radius: 5px;
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                        
+                                        .all-games .container-shopGames .container-txt p {
+                                            font-size: 18px;
+                                            margin-bottom: 5px;
+                                        }
+                                        
+                                        .all-games .container-shopGames .container-txt a {
+                                            text-decoration: none;
+                                            color: #ffffff;
+                                        }
+                                        
+                                        .all-games .container-shopGames .container-txt {
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: space-around;
+                                            align-items: center;
+                                            background-color: #007F0E;
+                                        }
+                                        
+                                        .all-games .container-shopGames a {
+                                            font-size: 14px;
+                                        }
+                                        /*HOME CATEGORIES*/
+                                        
+                                        .home .all-categories {
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: center;
+                                            flex-wrap: wrap;
+                                        }
+                                        
+                                        .home .all-categories .category_card {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            width: 250px;
+                                            height: 500px;
+                                            margin: 10px 10px;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .category_card__content {
+                                            width: 250px;
+                                            height: 500px;
+                                            position: absolute;
+                                            z-index: 1;
+                                            background-color: rgba(0, 0, 0, 0.5);
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                        
+                                        .category_card__image {
+                                            width: 250px;
+                                            height: 500px;
+                                            position: absolute;
+                                            overflow: hidden;
+                                        }
+                                        
+                                        .category_card__image img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            transition: all 1s ease-in-out;
+                                        }
+                                        
+                                        .home .all-categories .category_card:hover .category_card__image img {
+                                            width: 120%;
+                                            height: 120%;
+                                        }
+                                        
+                                        .home .all-categories .category_card .category_title {
+                                            color: var(--cor-terciaria);
+                                        }
+                                        /*HOME REVIEW*/
+                                        
+                                        .all-review {
+                                            padding: 0 90px 0 90px;
+                                        }
+                                        
+                                        .container-review {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            height: 450px;
+                                            width: 30%;
+                                            border-radius: 5px;
+                                            background-color: var(--cor-quaternaria);
+                                        }
+                                        
+                                        .container-review .container-review-img {
+                                            margin-top: 20px;
+                                            width: 35%;
+                                            height: 35%;
+                                        }
+                                        
+                                        .container-review .container-review-txt {
+                                            color: var(--cor-terciaria);
+                                            text-align: center;
+                                        }
+                                        
+                                        .container-review .container-review-txt .title,
+                                        .container-review .container-review-txt .description {
+                                            margin-top: 10px;
+                                        }
+                                        
+                                        .container-review .container-review-txt .description p {
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 7;
+                                            -webkit-box-orient: vertical;
+                                            text-align: justify;
+                                            padding: 0 30px 0 30px;
+                                        }
+                                        
+                                        .container-review .container-review-img img {
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 100%;
+                                            object-fit: cover;
+                                        }
+                                        /*HOME PATH NOTE*/
+                                        
+                                        .container-path {
+                                            display: flex;
+                                            flex-direction: row;
+                                            align-items: flex-end;
+                                            justify-content: space-between;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-img-sereia {
+                                            height: 180px;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-img-sereia img,
+                                        .all-pathnotes .container-path .container-img-guerreiro img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-img-guerreiro {
+                                            height: 400px;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-path-txt {
+                                            color: var(--cor-terciaria);
+                                            text-align: justify;
+                                            width: 40%;
+                                            height: 100%;
+                                            margin-bottom: 12px;
+                                            background-color: var(--cor-quaternaria);
+                                            right: 35%;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-path-txt .container-img-post {
+                                            width: 100%;
+                                            height: 100px;
+                                            object-fit: cover;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-path-txt .container-img-post img {
+                                            width: 100%;
+                                            height: 100px;
+                                            object-fit: cover;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-path-txt .title {
+                                            text-align: center;
+                                        }
+                                        
+                                        .all-pathnotes .container-path .container-path-txt p {
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 10;
+                                            -webkit-box-orient: vertical;
+                                            text-align: justify;
+                                            padding: 0 30px 0 30px;
+                                        }
+                                        /* ARTES */
+                                        
+                                        .all-games .container-artGames {
+                                            margin: 20px 20px;
+                                        }
+                                        
+                                        .all-games .container-artGames .container-text p {
+                                            padding-bottom: 8px;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .all-games .container-artGames .container-text {
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: space-around;
+                                            background-color: #007F0E;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .all-games .container-artGames .container-imgArt {
+                                            width: 640px;
                                             height: auto;
+                                            background-color: #007F0E;
                                         }
-                                        .home .bannerItemImage {
-                                            height: 300px;
+                                        
+                                        .all-games .container-artGames .container-imgArt img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
                                         }
-                                        .home .banner {
-                                            height: 300px;
+                                        
+                                        .head {
+                                            display: none;
                                         }
-                                        .home .bannerContainer {
-                                            height: 300px;
-                                        }
-                                        @media (max-width: 985px) {
+                                        
+                                        @media (max-width: 1350px) {
+                                            .all-games {
+                                                display: inherit;
+                                                width: 80%;
+                                                margin: 0 auto;
+                                            }
                                             .home .all-categories .category_card {
-                                                width: 100px;
-                                                height: 300px;
+                                                width: 160px;
+                                                height: 400px;
                                             }
                                             .category_card__content {
-                                                width: 100px;
-                                                height: 300px;
+                                                width: 160px;
+                                                height: 400px;
                                             }
                                             .category_card__image {
-                                                width: 100px;
-                                                height: 300px;
+                                                width: 160px;
+                                                height: 400px;
                                             }
-                                            .all-review .container-review {
-                                                width: 50%;
+                                            .sidenav {
+                                                width: 0px;
                                             }
-                                        }
-                                        @media (max-width: 625px) {
+                                            #main {
+                                                margin-left: 0px;
+                                            }
+                                            .openbtn {
+                                                display: none;
+                                            }
+                                            .all-games .grid-container {
+                                                display: flex;
+                                                flex-direction: row;
+                                                flex-wrap: wrap;
+                                                justify-content: center;
+                                            }
                                             .all-games .grid-container .container-shopGames {
-                                                width: 80%;
-                                                height: 10%;
+                                                width: 30%;
+                                                height: 30%;
+                                                margin: 10px;
                                             }
                                             .all-games .grid-container .container-shopGames:first-child {
-                                                width: 80%;
-                                                height: 10%;
+                                                width: 30%;
+                                                height: 30%;
+                                                margin: 10px;
                                             }
                                             .all-review .container-review {
-                                                width: 100%;
+                                                width: 40%;
                                             }
-                                            .all-review {
-                                                padding: 0 50px 0 50px;
+                                            .all-games .container-artGames .container-imgArt {
+                                                width: 100%;
+                                                height: auto;
+                                            }
+                                            .home .bannerItemImage {
+                                                height: 300px;
+                                            }
+                                            .home .banner {
+                                                height: 300px;
+                                            }
+                                            .home .bannerContainer {
+                                                height: 300px;
+                                            }
+                                            .head {
+                                                top: 0;
+                                                width: 100%;
+                                                display: flex;
+                                                background-color: #212121;
+                                            }
+                                            .head a {
+                                                color: white;
+                                                padding: 10px;
+                                                margin: 0 auto;
+                                            }
+                                            .head a:hover {
+                                                color: var(--cor-retoques);
+                                            }
+                                            @media (max-width: 985px) {
+                                                .container-path {
+                                                    margin-top: 15px;
+                                                    justify-content: center;
+                                                }
+                                                .all-pathnotes .container-path .container-path-txt {
+                                                    width: 80%;
+                                                }
+                                                .home .all-categories .category_card {
+                                                    width: 100px;
+                                                    height: 300px;
+                                                }
+                                                .category_card__content {
+                                                    width: 100px;
+                                                    height: 300px;
+                                                }
+                                                .category_card__image {
+                                                    width: 100px;
+                                                    height: 300px;
+                                                }
+                                                .all-review .container-review {
+                                                    width: 50%;
+                                                }
+                                                .container-img-guerreiro,
+                                                .container-img-sereia {
+                                                    display: none;
+                                                }
+                                            }
+                                            @media (max-width: 625px) {
+                                                .all-games .grid-container .container-shopGames {
+                                                    width: 80%;
+                                                    height: 10%;
+                                                }
+                                                .all-games .grid-container .container-shopGames:first-child {
+                                                    width: 80%;
+                                                    height: 10%;
+                                                }
+                                                .all-review .container-review {
+                                                    width: 100%;
+                                                }
+                                                .all-review {
+                                                    padding: 0 50px 0 50px;
+                                                }
                                             }
                                         }
-                                    }
