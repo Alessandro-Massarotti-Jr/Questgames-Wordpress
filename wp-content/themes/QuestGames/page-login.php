@@ -17,7 +17,6 @@ Template Name: login
         margin-left: 0;
     }
 </style>
-
 <div class="login">
     <div class="image">
         <img src="<?php echo get_template_directory_uri() . '/assets/image/Flogin.png' ?>" alt="Imagem Login">

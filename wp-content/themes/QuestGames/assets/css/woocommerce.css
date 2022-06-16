@@ -1,3 +1,8 @@
+.cart__title{
+    text-align: center;
+    background-color: var(--cor-retoques);
+}
+
 .woocommerce-cart-form {
     background-color: var(--cor-quaternaria);
 }
@@ -65,6 +70,10 @@
 
 .head {
     display: none;
+}
+
+.woocommerce-cart table.cart img{
+    width: 100px;
 }
 
 @media (max-width: 1350px) {
