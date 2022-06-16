@@ -30,18 +30,26 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 45%;
 }
 
 .login .flex-form-row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 .login .form form input {
-    border: 3px solid #323232;
     border-radius: 5px!important;
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-bottom: 5px;
 }
+
 
 .login .form form input:focus {
     border: 3px solid var(--cor-retoques);
@@ -52,18 +60,20 @@
     color: #ffffff;
     border-radius: 3px;
     transition: 0.3s;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
     cursor: pointer;
+    width: 100%;
 }
 
 .login .form form .submit input {
-    background-color: #000000;
+    background-color: #464242;
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 2px solid #5b5b5b;
     border-radius: 3px;
     transition: 0.3s;
     cursor: pointer;
+    width: 100%;
 }
 
 .login .form form .submit:hover {
@@ -83,6 +93,10 @@
 
 .login .form .homeBtn:hover {
     color: var(--cor-retoques);
+}
+.user-pass-wrap{
+    width: 100%;
+    padding-top: 10px;
 }
 
 @media(max-width:767px) {

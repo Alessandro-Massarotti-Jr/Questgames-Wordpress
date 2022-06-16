@@ -30,31 +30,31 @@ $games = new WP_Query($gameArgs);
 
 <?php get_header() ?>
 <div class="head">
-        <a href="<?php echo home_url() ?>">
-            <ion-icon class="icons" name="bag-add-outline"></ion-icon>
+    <a href="<?php echo home_url() ?>">
+        <ion-icon class="icons" name="bag-add-outline"></ion-icon>
+    </a>
+    <a href="<?php echo home_url() . '/carrinho' ?>">
+        <ion-icon class="icons" name="cart-outline"></ion-icon>
+    </a>
+    <a href="<?php echo home_url() . '/categorias' ?>">
+        <ion-icon class="icons" name="pricetag-outline"></ion-icon>
+    </a>
+    <?php if (is_user_logged_in()) : ?>
+        <a href="<?php echo home_url() . '/biblioteca/' ?>">
+            <ion-icon class="icons" name="library-outline"></ion-icon>
         </a>
-        <a href="<?php echo home_url() . '/carrinho' ?>">
-            <ion-icon class="icons" name="cart-outline"></ion-icon>
+        <a href="<?php echo home_url() . '/perfil' ?>">
+            <ion-icon class="icons" name="person-outline"></ion-icon>
         </a>
-        <a href="<?php echo home_url() . '/categorias' ?>">
-            <ion-icon class="icons" name="pricetag-outline"></ion-icon>
+    <?php else : ?>
+        <a href="<?php echo home_url() ?>/login">
+            <ion-icon class="icons" name="log-in-outline"></ion-icon>
         </a>
-        <?php if (is_user_logged_in()) : ?>
-            <a href="<?php echo home_url() . '/biblioteca/' ?>">
-                <ion-icon class="icons" name="library-outline"></ion-icon>
-            </a>
-            <a href="<?php echo home_url() . '/perfil' ?>">
-                <ion-icon class="icons" name="person-outline"></ion-icon>
-            </a>
-        <?php else : ?>
-            <a href="<?php echo home_url() ?>/login">
-                <ion-icon class="icons" name="log-in-outline"></ion-icon>
-            </a>
-            <a href="<?php echo home_url() . '/cadastro' ?>">
-                <ion-icon class="icons" name="person-add-outline"></ion-icon>
-            </a>
-        <?php endif; ?>
-    </div>
+        <a href="<?php echo home_url() . '/cadastro' ?>">
+            <ion-icon class="icons" name="person-add-outline"></ion-icon>
+        </a>
+    <?php endif; ?>
+</div>
 
 <?php $current_user = wp_get_current_user();
 $downloads = wc_get_customer_available_downloads($current_user->id);
@@ -75,7 +75,7 @@ $downloads = wc_get_customer_available_downloads($current_user->id);
         </p>
         <hr>
     </div>
-   
+
     <div class="container-biblio">
         <div class="container-left">
             <?php foreach ($downloads as $download) : ?>
@@ -119,6 +119,7 @@ $downloads = wc_get_customer_available_downloads($current_user->id);
                     <p id="rightDate"></p>
                     <p id="rightSize"></p>
                     <a id="buttonDownload" href="">Baixar</a>
+                    <a id="keyGen" onclick="makeId()">Gerar Key</a>
                 </div>
             </div>
         </div>
@@ -129,6 +130,7 @@ $downloads = wc_get_customer_available_downloads($current_user->id);
         var count = document.getElementsByClassName("container-game").length + 1;
         var game = this.event.target.id;
         document.getElementById("buttonDownload").style.display = "inline";
+        document.getElementById("keyGen").style.display = "inline";
         document.getElementById("container-img").style.display = "block";
 
         for (var i = 1; i < count; i++) {
@@ -149,5 +151,18 @@ $downloads = wc_get_customer_available_downloads($current_user->id);
             }
         }
     }
+
+    function makeId() {
+        var result = '';
+        length = 16;
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        var charactersLength = characters.length;
+        for (var i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() *
+                charactersLength));
+        }
+        console.log(result);
+    }
+
 </script>
 <?php get_footer() ?>

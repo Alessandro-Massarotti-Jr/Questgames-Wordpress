@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?>>
     <header>
-    
+
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                 <ion-icon name="menu-outline"></ion-icon>
@@ -55,9 +55,9 @@
         <h1 class="openbtn" onclick="openNav()">
             <ion-icon name="menu-outline"></ion-icon>
         </h1>
-
-        <img src="<?php echo get_template_directory_uri() . '/assets/image/logo.png' ?>" alt="logo" class="logo">
-
+        <div class="container-header">
+           <center> <img src="<?php echo get_template_directory_uri() . '/assets/image/logo.png' ?>" alt="logo" class="logo"></center>
+        </div>
 
         <form class="searchForm" action="search">
             <div class="">

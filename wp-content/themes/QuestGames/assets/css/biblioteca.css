@@ -109,12 +109,25 @@
                         color: #ffffff;
                     }
                     
-                    #buttonDownload {
+                   
+                    
+                    #container-img, #buttonDownload {
                         display: none;
                     }
-                    
-                    #container-img {
+                    #keyGen{
                         display: none;
+                        background-color: var(--cor-retoques);
+                        padding: 5px;
+                        background-color: var(--cor-retoques);
+                        border-radius: 8px;
+                        text-decoration: none;
+                        color: #ffffff;
+                        height: 37px;
+                        margin-left: 20px;
+                        border: none;
+                    }
+                    #keyGen p{
+                      font-size: 18px;
                     }
                     
                     .head {

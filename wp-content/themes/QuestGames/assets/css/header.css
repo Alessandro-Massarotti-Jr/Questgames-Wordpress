@@ -1,6 +1,7 @@
         header {
             background-color: var(--cor-quaternaria);
             display: flex;
+            flex-direction: row;
         }
         /**************************sidebar**************************/
         
@@ -61,11 +62,15 @@
         }
         
         .logo {
+            position: absolute;
+            width: 380px;
+            height: 100px;
+        }
+        .container-header{
             position: relative;
             top: 5px;
-            width: 300px;
-            margin-left: auto;
-            margin-right: auto;
+            height: 100px;
+            width: 100%;
             padding: 5px
         }
         /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -74,16 +79,6 @@
             transition: margin-left .5s;
             margin-left: 250px;
             min-height: 100vh;
-        }
-        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-        
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-            .sidenav a {
-                font-size: 18px;
-            }
         }
         
         .searchForm {
@@ -121,4 +116,28 @@
         .searchForm button:hover {
             background-color: var(--cor-retoques);
             color: #ffffff;
+        }
+
+          /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+          @media screen and (max-width: 1350px) {
+            .logo{
+                position: inherit;
+                padding: 0, 20px, 0, 20px;
+
+            }
+        
+        header{
+            align-items: center;
+            flex-direction: column;
+           }
+          
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+           
         }
