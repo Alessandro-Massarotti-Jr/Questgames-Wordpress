@@ -30,6 +30,6 @@ Template Name: Carrinho
         </a>
     <?php endif; ?>
 </div>
-<h1>Carrinho</h1>
+<h1 class="cart__title">Carrinho</h1>
 <?php the_content(); ?>
 <?php get_footer(); ?>
