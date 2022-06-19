@@ -49,6 +49,7 @@ $all_categories = get_categories($categoriesArgs);
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
+    <div class="banner"></div>
 
 
 </div>
