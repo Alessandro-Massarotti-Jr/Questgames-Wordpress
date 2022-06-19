@@ -30,6 +30,15 @@ $categoriesArgs = array(
 );
 $all_categories = get_categories($categoriesArgs);
 
+
+$reviewsArgs = array(
+    'post_type' => 'reviews',
+    'post_status' => 'published',
+    'posts_per_page' => 3,
+);
+
+$reviews = new WP_Query($reviewsArgs);
+
 // echo '<div style="background-color:#ffffff">';
 // var_dump($all_categories);
 // echo '</div>';
@@ -40,7 +49,7 @@ $all_categories = get_categories($categoriesArgs);
 
 <div class="home">
 
-  
+
 
     <div class="bannerContainer">
         <div class="banner" id="bannerHome">
@@ -134,20 +143,24 @@ $all_categories = get_categories($categoriesArgs);
     <p>Análises de usuários</p>
 </div>
 <div class="all-review">
-    <div class="container-review">
-        <div class="container-review-img">
-            <img src="wp-content/uploads/test/aaaa.png" alt="">
-        </div>
-        <div class="container-review-txt">
-            <div class="title">
-                <p class="nickname">{author}</p>
-                <p>{Título game} {like or deslike)</p>
+    <?php if ($reviews->have_posts()) : while ($reviews->have_posts()) : $reviews->the_post(); ?>
+
+            <div class="container-review">
+                <div class="container-review-img">
+                    <img src="<?php echo get_field('imagem') ?>" alt="<?php echo the_title() ?>">
+                </div>
+                <div class="container-review-txt">
+                    <div class="title">
+                        <p class="nickname"><?php echo get_field('usuario') ?></p>
+                        <p><?php echo get_field('jogo_relacionado') ?> <?php echo get_field('review') ?></p>
+                    </div>
+                    <div class="description">
+                        <p><?php echo the_content() ?></p>
+                    </div>
+                </div>
             </div>
-            <div class="description">
-                <p>Lorem ipsum dolor sit amet. Ab architecto repellat et sint galisum in nostrum nihil non rerum voluptate. Sed nisi praesentium aut doloribus alias ut voluptate dolores. At consequatur voluptatem in labore natus qui maiores quam et velit cupiditate aut dolor nesciunt. Ut rerum quod qui inventore enim et sapiente minus nam esse commodi. Aut quam voluptatem non suscipit dolores cum aspernatur molestias cum rerum magni est molestiae provident id facilis rerum sit expedita distinctio. Et repudiandae voluptates quo eius voluptas quo iste aut eligendi architecto qui aspernatur quaerat id dolor deleniti ut libero eligendi? Aut Quis nihil At recusandae rerum sit magni aliquam ut aliquid quis hic repellendus quos eos voluptas aliquam qui sint animi. Ut veritatis saepe qui fugiat nulla cum numquam soluta sit repellendus quisquam eos molestias sint.</p>
-            </div>
-        </div>
-    </div>
+
+    <?php endwhile; else : endif; ?>
 </div>
 
 <div class="all-comunidade">
