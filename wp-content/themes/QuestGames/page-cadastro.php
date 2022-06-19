@@ -16,6 +16,9 @@ Template Name: Cadastro
     #main {
         margin-left: 0;
     }
+    .head{
+        display: none!important;
+    }
 </style>
 
 

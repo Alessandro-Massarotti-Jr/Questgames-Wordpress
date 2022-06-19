@@ -13,11 +13,15 @@ Template Name: login
         display: none;
     }
 
+    .head{
+        display: none!important;
+    }
+
     #main {
         margin-left: 0;
     }
 </style>
-<div class="login">
+<div class="login" id="login">
     <div class="image">
         <img src="<?php echo get_template_directory_uri() . '/assets/image/Flogin.png' ?>" alt="Imagem Login">
     </div>
