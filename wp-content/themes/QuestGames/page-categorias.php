@@ -12,8 +12,8 @@ $all_categories = get_categories($categoriesArgs);
 <?php get_header(); ?>
 
 <div class="categorias">
+<h1 class="cart__title">Carrinho</h1>
     <div class="categorias__title">
-     <h1>Categorias</h1>
      <div class="categorias__title__search">
          <label for="filterCategoryByName">Pesquisar:</label>
      <input name="filterCategoryByName" placeholder="Categoria..." id="filterCategoryByName" type="text">
@@ -33,7 +33,7 @@ $all_categories = get_categories($categoriesArgs);
                     </div>
                     <h2 class="categoryCard__title"><?php echo $category->name ?></h2>
                     <p class="categoryCard__description"><?php echo $category->description ?></p>
-                    <a class="categoryCard__button" href="<?php echo home_url() . '/categoria-jogos?categoria='.$category->name ?>">ver jogos</a>
+                    <a class="categoryCard__button" href="<?php echo home_url() . '/categoria-jogos?categoria='.$category->name ?>">Ver jogos</a>
                 </div>
             <?php else : ?>
                 <div class="categoryCard active" cardName="<?php echo $category->name ?>">
@@ -44,12 +44,12 @@ $all_categories = get_categories($categoriesArgs);
                     </div>
                     <h2 class="categoryCard__title"><?php echo $category->name ?></h2>
                     <p class="categoryCard__description"><?php echo $category->description ?></p>
-                    <a class="categoryCard__button" href="<?php echo home_url() . '/categoria-jogos?categoria='.$category->name ?>">ver jogos</a>
+                    <a class="categoryCard__button" href="<?php echo home_url() . '/categoria-jogos?categoria='.$category->name ?>">Ver jogos</a>
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
-    <div class="banner"></div>
+    <div class="banner_1"></div>
 
 
 </div>

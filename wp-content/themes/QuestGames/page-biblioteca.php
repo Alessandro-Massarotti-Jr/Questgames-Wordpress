@@ -36,11 +36,7 @@ $downloads = wc_get_customer_available_downloads($current_user->id);
 ?>
 <div class="container-master">
     <div class="container-info">
-        <p>
-            <ion-icon class="icons md hydrated" name="library-outline" role="img" aria-label="library outline"></ion-icon>
-            Biblioteca
-            <ion-icon class="icons md hydrated" name="library-outline" role="img" aria-label="library outline">
-        </p>
+    <h1 class="cart__title">Biblioteca</h1>
     </div>
     <?php foreach ($downloads as $download) : ?>
         <?php $g++ ?>
@@ -99,7 +95,7 @@ $downloads = wc_get_customer_available_downloads($current_user->id);
             </div>
         </div>
     </div>
-    <div class="banner"></div>
+    <a href="https://discord.gg/6zaMGyNeME" target="blank"><div class="banner_1"></div></a>
 </div>
 <script>
     function clickGame() {
